@@ -1,12 +1,12 @@
 package Model.Statement;
 
 import Model.ADTs.MyIStack;
-import Model.Exceptions.InterpreterException;
+import Exceptions.InterpreterException;
 import Model.ProgramState;
 
 public class CompoundStatement implements IStatement {
-    IStatement firstStatement;
-    IStatement secondStatement;
+    final IStatement firstStatement;
+    final IStatement secondStatement;
 
     public CompoundStatement(IStatement firstStatement, IStatement secondStatement) {
         this.firstStatement = firstStatement;

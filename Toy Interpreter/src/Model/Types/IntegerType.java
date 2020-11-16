@@ -1,5 +1,6 @@
 package Model.Types;
 
+import Model.Values.IntegerValue;
 import Model.Values.Value;
 
 public class IntegerType implements Type {
@@ -12,5 +13,11 @@ public class IntegerType implements Type {
     public String toString() {
         return "int";
     }
+
+    @Override
+    public Value defaultValue() {
+        return new IntegerValue(0);
+    }
+
 
 }

@@ -4,7 +4,7 @@ import Model.Types.IntegerType;
 import Model.Types.Type;
 
 public class IntegerValue implements Value {
-    int value;
+    final int value;
     public IntegerValue(int val) {
         value = val;
     }
@@ -24,5 +24,13 @@ public class IntegerValue implements Value {
     @Override
     public Type getType() {
         return new IntegerType();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof IntegerValue)) return false;
+        IntegerValue that = (IntegerValue) o;
+        return value == that.value;
     }
 }

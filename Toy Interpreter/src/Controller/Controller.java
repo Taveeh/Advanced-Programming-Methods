@@ -1,26 +1,58 @@
 package Controller;
 
 import Model.ADTs.*;
-import Model.Exceptions.ExecutionException;
-import Model.Exceptions.InterpreterException;
-import Model.Expression.ArithmeticExpression;
-import Model.Expression.ValueExpression;
-import Model.Expression.VariableExpression;
+import Exceptions.ExecutionException;
+import Exceptions.InterpreterException;
 import Model.ProgramState;
 import Model.Statement.*;
-import Model.Types.BooleanType;
-import Model.Types.IntegerType;
-import Model.Values.BooleanValue;
-import Model.Values.IntegerValue;
+import Model.Values.ReferenceValue;
 import Model.Values.Value;
 import Repository.IRepository;
 
-import java.util.PropertyResourceBundle;
+import java.sql.Ref;
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Controller {
-    IRepository repository;
+    final IRepository repository;
     Boolean displayAll;
 
+
+    private Map<Integer, Value> unsafeGarbageCollector(List<Integer> symbolTableAddresses, Map<Integer, Value> heap) {
+        return heap.entrySet().stream()
+                .filter(e -> symbolTableAddresses.contains(e.getKey()))
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+    }
+
+    private List<Integer> getAddressesFromSymbolTable(Collection<Value> symbolTableValue, Collection<Value> heap) {
+        return Stream.concat(
+                heap.stream()
+                .filter(v -> v instanceof ReferenceValue)
+                .map(v -> {
+                    ReferenceValue v1 = (ReferenceValue) v;
+                    return v1.getAddress();
+                }),
+                symbolTableValue.stream()
+                .filter(v -> v instanceof ReferenceValue)
+                .map(v -> {
+                    ReferenceValue v1 = (ReferenceValue) v;
+                    return v1.getAddress();
+                })
+        ).collect(Collectors.toList());
+    }
+
+    private List<Integer> getAddressesFromSymbolTable(Collection<Value> symbolTableValues) {
+        return symbolTableValues.stream()
+                .filter(v ->v instanceof ReferenceValue)
+                .map(v -> {
+                    ReferenceValue v1 = (ReferenceValue) v;
+                    return v1.getAddress();
+                })
+                .collect(Collectors.toList());
+    }
     public Controller(IRepository repository) {
         this.repository = repository;
         displayAll = false;
@@ -30,6 +62,7 @@ public class Controller {
         this.displayAll = displayAll;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public ProgramState oneStep(ProgramState state) throws InterpreterException {
         MyIStack<IStatement> stack = state.getExecutionStack();
         if (stack.isEmpty()) {
@@ -44,136 +77,38 @@ public class Controller {
         if (displayAll) {
             System.out.println(displayState(programState));
         }
+        repository.logProgramStateExecution();
+        MyIHeap<Value> heap = new MyHeap<>();
         while (!programState.getExecutionStack().isEmpty()) {
             try {
-                oneStep(programState);
+                programState = oneStep(programState);
                 if (displayAll) {
                     System.out.println(displayState(programState));
                 }
+                repository.logProgramStateExecution();
+                heap.setContent(unsafeGarbageCollector(
+                        getAddressesFromSymbolTable(
+                                programState.getSymbolTable().getContent().values(),
+                                programState.getHeapTable().getContent().values()
+                        ),
+                        programState.getHeapTable().getContent()
+                ));
+                programState.setHeapTable(heap);
             } catch (InterpreterException exception) {
                 throw new InterpreterException(exception.getMessage());
             }
         }
+        System.out.println(getOutput(programState));
     }
     public String displayState(ProgramState state) {
         return state.toString();
     }
 
-    public void newProgram(int program) {
-        ProgramState state;
-        MyIStack<IStatement> stack = new MyStack<IStatement>();
-        IStatement ex1 = new CompoundStatement(
-                new VariableDeclarationStatement(
-                        "v",
-                        new IntegerType()
-                ),
-                new CompoundStatement(
-                        new AssignStatement(
-                                "v",
-                                new ValueExpression(
-                                        new IntegerValue(2)
-                                )
-                        ),
-                        new PrintStatement(
-                                new VariableExpression(
-                                        "v"
-                                )
-                        )
-                )
-        );
-        IStatement ex2 = new CompoundStatement(
-                new VariableDeclarationStatement(
-                        "a",
-                        new IntegerType()),
-                new CompoundStatement(new VariableDeclarationStatement(
-                        "b",
-                        new IntegerType()
-                ),
-                        new CompoundStatement(
-                                new AssignStatement(
-                                        "a",
-                                        new ArithmeticExpression(
-                                                '+',
-                                                new ValueExpression(
-                                                        new IntegerValue(2)
-                                                ),
-                                                new ArithmeticExpression(
-                                                        '*',
-                                                        new ValueExpression(
-                                                                new IntegerValue(3)
-                                                        ),
-                                                        new ValueExpression(
-                                                                new IntegerValue(5)
-                                                        )
-                                                )
-                                        )
-                                ),
-                                new CompoundStatement(
-                                        new AssignStatement(
-                                                "b",
-                                                new ArithmeticExpression(
-                                                        '+',
-                                                        new VariableExpression("a"),
-                                                        new ValueExpression(
-                                                                new IntegerValue(1)
-                                                        )
-                                                )
-                                        ),
-                                        new PrintStatement(
-                                                new VariableExpression("b")
-                                        )
-                                )
-                        )
-                )
-        );
-        IStatement ex3 = new CompoundStatement(
-                new VariableDeclarationStatement(
-                        "a",
-                        new BooleanType()
-                ),
-                new CompoundStatement(new VariableDeclarationStatement(
-                        "v",
-                        new IntegerType()
-                ),
-                        new CompoundStatement(
-                                new AssignStatement(
-                                        "a",
-                                        new ValueExpression(
-                                                new BooleanValue(true)
-                                        )
-                                ),
-                                new CompoundStatement(
-                                        new IfStatement(
-                                                new VariableExpression("a"),
-                                                new AssignStatement(
-                                                        "v",
-                                                        new ValueExpression(
-                                                                new IntegerValue(2)
-                                                        )
-                                                ),
-                                                new AssignStatement(
-                                                        "v",
-                                                        new ValueExpression(
-                                                                new IntegerValue(3)
-                                                        )
-                                                )
-                                        ),
-                                        new PrintStatement(
-                                                new VariableExpression("v")
-                                        )
-                                )
-                        )
-                )
-        );
-        switch (program) {
-            case 1 -> stack.push(ex1);
-            case 2 -> stack.push(ex2);
-            case 3 -> stack.push(ex3);
-        }
-
-        state = new ProgramState(stack, new MyDictionary<String, Value>(), new MyList<Value>(), null);
+    public void addState(ProgramState state) {
         repository.addState(state);
-
     }
 
+    public String getOutput(ProgramState state) {
+        return state.getOutputConsole().toString();
+    }
 }

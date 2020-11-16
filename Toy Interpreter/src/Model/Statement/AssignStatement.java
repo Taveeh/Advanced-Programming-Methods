@@ -2,15 +2,15 @@ package Model.Statement;
 
 import Model.ADTs.MyIDictionary;
 import Model.ADTs.MyIStack;
-import Model.Exceptions.AssignmentException;
-import Model.Exceptions.InterpreterException;
+import Exceptions.AssignmentException;
+import Exceptions.InterpreterException;
 import Model.Expression.IExpression;
 import Model.ProgramState;
 import Model.Values.Value;
 
 public class AssignStatement implements IStatement{
-    String id;
-    IExpression expression;
+    final String id;
+    final IExpression expression;
 
     public AssignStatement(String id, IExpression expression) {
         this.id = id;
@@ -30,7 +30,7 @@ public class AssignStatement implements IStatement{
         MyIStack<IStatement> stack = state.getExecutionStack();
         MyIDictionary<String, Value> table = state.getSymbolTable();
         if (table.isVariableDefined(id)) {
-            Value value = expression.evaluateExpression(table);
+            Value value = expression.evaluateExpression(table, state.getHeapTable());
             if (value.getType().equals(table.lookup(id).getType())) {
                 table.update(id, value);
             } else {

@@ -1,14 +1,15 @@
 package Model.Expression;
 
 import Model.ADTs.MyIDictionary;
-import Model.Exceptions.InterpreterException;
+import Exceptions.InterpreterException;
+import Model.ADTs.MyIHeap;
 import Model.Types.IntegerType;
 import Model.Values.IntegerValue;
 import Model.Values.Value;
 
 public class ArithmeticExpression implements IExpression {
-    IExpression expression1;
-    IExpression expression2;
+    final IExpression expression1;
+    final IExpression expression2;
     int operation;
 
     public ArithmeticExpression(char operation, IExpression expression1, IExpression expression2) {
@@ -34,11 +35,11 @@ public class ArithmeticExpression implements IExpression {
     }
 
     @Override
-    public Value evaluateExpression(MyIDictionary<String, Value> table) throws InterpreterException {
+    public Value evaluateExpression(MyIDictionary<String, Value> table, MyIHeap<Value> heap) throws InterpreterException {
         Value value1, value2;
-        value1 = expression1.evaluateExpression(table);
+        value1 = expression1.evaluateExpression(table, heap);
         if (value1.getType().equals(new IntegerType())) {
-            value2 = expression2.evaluateExpression(table);
+            value2 = expression2.evaluateExpression(table, heap);
             if (value2.getType().equals(new IntegerType())) {
                 IntegerValue integerValue1 = (IntegerValue)value1;
                 IntegerValue integerValue2 = (IntegerValue)value2;
@@ -55,6 +56,8 @@ public class ArithmeticExpression implements IExpression {
                     case 4:
                         if (number2 == 0) throw new InterpreterException("Division by zero");
                         return new IntegerValue(number1 / number2);
+                    default:
+                        throw new InterpreterException("Invalid operation");
                 }
             } else {
                 throw new InterpreterException("Second operand is not an integer");
@@ -62,6 +65,5 @@ public class ArithmeticExpression implements IExpression {
         } else {
             throw new InterpreterException("First operand is not an integer");
         }
-        return null;
     }
 }

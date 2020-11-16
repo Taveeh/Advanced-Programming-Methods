@@ -1,8 +1,8 @@
 package Model.Statement;
 
 import Model.ADTs.MyIStack;
-import Model.Exceptions.ConditionException;
-import Model.Exceptions.InterpreterException;
+import Exceptions.ConditionException;
+import Exceptions.InterpreterException;
 import Model.Expression.IExpression;
 import Model.ProgramState;
 import Model.Types.BooleanType;
@@ -10,9 +10,9 @@ import Model.Values.BooleanValue;
 import Model.Values.Value;
 
 public class IfStatement implements IStatement {
-    IExpression expression;
-    IStatement thenStatement;
-    IStatement elseStatement;
+    final IExpression expression;
+    final IStatement thenStatement;
+    final IStatement elseStatement;
 
     public IfStatement(IExpression expression, IStatement thenStatement, IStatement elseStatement) {
         this.expression = expression;
@@ -28,7 +28,7 @@ public class IfStatement implements IStatement {
     @Override
     public ProgramState execute(ProgramState state) throws InterpreterException {
         MyIStack<IStatement> stack = state.getExecutionStack();
-        Value condition = expression.evaluateExpression(state.getSymbolTable());
+        Value condition = expression.evaluateExpression(state.getSymbolTable(), state.getHeapTable());
         if (!condition.getType().equals(new BooleanType())) {
             throw new ConditionException("Condition is not of boolean type");
         }

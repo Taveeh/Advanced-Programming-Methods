@@ -2,19 +2,18 @@ package Model.Statement;
 
 import Model.ADTs.MyIDictionary;
 import Model.ADTs.MyIStack;
-import Model.Exceptions.DeclarationException;
-import Model.Exceptions.InterpreterException;
+import Exceptions.DeclarationException;
+import Exceptions.InterpreterException;
 import Model.ProgramState;
-import Model.Types.BooleanType;
-import Model.Types.IntegerType;
-import Model.Types.Type;
+import Model.Types.*;
 import Model.Values.BooleanValue;
 import Model.Values.IntegerValue;
+import Model.Values.StringValue;
 import Model.Values.Value;
 
 public class VariableDeclarationStatement implements IStatement {
-    String name;
-    Type type;
+    final String name;
+    final Type type;
 
     public VariableDeclarationStatement(String name, Type type) {
         this.name = name;
@@ -28,13 +27,19 @@ public class VariableDeclarationStatement implements IStatement {
         if (table.isVariableDefined(name)) {
             throw new DeclarationException("Variable is already declared");
         } else {
-            if (type.equals(new IntegerType())) {
-                table.add(name, new IntegerValue());
-            }else if (type.equals(new BooleanType())) {
-                table.add(name, new BooleanValue());
-            } else {
-                throw new DeclarationException("Type does not exist");
-            }
+//            if (type.equals(new IntegerType())) {
+//                table.add(name, new IntegerType().defaultValue());
+//            } else if (type.equals(new BooleanType())) {
+//                table.add(name, new BooleanType().defaultValue());
+//            } else if (type.equals(new StringType())) {
+//                table.add(name, new StringType().defaultValue());
+//            } else if (type instanceof ReferenceType) {
+//                table.add();
+//            } else {
+//                throw new DeclarationException("Type does not exist");
+//            }
+            Value defaultValue = type.defaultValue();
+            table.add(name, defaultValue);
         }
         state.setSymbolTable(table);
         state.setExecutionStack(stack);

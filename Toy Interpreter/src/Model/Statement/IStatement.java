@@ -1,6 +1,6 @@
 package Model.Statement;
 
-import Model.Exceptions.InterpreterException;
+import Exceptions.InterpreterException;
 import Model.ProgramState;
 
 public interface IStatement {

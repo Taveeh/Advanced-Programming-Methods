@@ -1,11 +1,12 @@
 package Model.Expression;
 
 import Model.ADTs.MyIDictionary;
-import Model.Exceptions.InterpreterException;
+import Exceptions.InterpreterException;
+import Model.ADTs.MyIHeap;
 import Model.Values.Value;
 
 public class VariableExpression implements IExpression {
-    String id;
+    final String id;
 
     @Override
     public String toString() {
@@ -17,7 +18,7 @@ public class VariableExpression implements IExpression {
     }
 
     @Override
-    public Value evaluateExpression(MyIDictionary<String, Value> table) throws InterpreterException {
+    public Value evaluateExpression(MyIDictionary<String, Value> table, MyIHeap<Value> heap) throws InterpreterException {
         return table.lookup(id);
     }
 }

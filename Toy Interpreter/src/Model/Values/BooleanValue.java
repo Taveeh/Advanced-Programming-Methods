@@ -3,10 +3,8 @@ package Model.Values;
 import Model.Types.BooleanType;
 import Model.Types.Type;
 
-import java.util.Objects;
-
 public class BooleanValue implements Value {
-    Boolean value;
+    final Boolean value;
     public BooleanValue(Boolean val) {
         value = val;
     }
@@ -36,4 +34,6 @@ public class BooleanValue implements Value {
     public Type getType() {
         return new BooleanType();
     }
+
+
 }

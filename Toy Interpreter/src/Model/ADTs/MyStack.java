@@ -1,12 +1,14 @@
 package Model.ADTs;
-import Model.Exceptions.ADTException;
+import Exceptions.ADTException;
+import Model.Statement.IStatement;
 
+import java.util.ListIterator;
 import java.util.Stack;
 public class MyStack<T> implements MyIStack<T> {
-    Stack<T> stack;
+    final Stack<T> stack;
 
     public MyStack() {
-        this.stack = new Stack<T>();
+        this.stack = new Stack<>();
     }
 
     @Override
@@ -23,6 +25,17 @@ public class MyStack<T> implements MyIStack<T> {
             stack.push(elem);
     }
 
+    public T top() throws ADTException {
+        if (stack.isEmpty()) {
+            throw new ADTException("Stack is empty");
+        }
+        return stack.firstElement();
+    }
+
+    public int size() {
+        return stack.size();
+    }
+
     @Override
     public boolean isEmpty() {
         return stack.isEmpty();
@@ -30,6 +43,11 @@ public class MyStack<T> implements MyIStack<T> {
 
     @Override
     public String toString() {
-        return stack.toString();
+        StringBuilder s = new StringBuilder();
+        ListIterator<T> stackIterator = stack.listIterator(stack.size());
+        while(stackIterator.hasPrevious()) {
+            s.append(stackIterator.previous().toString()).append('\n');
+        }
+        return s.toString();
     }
 }

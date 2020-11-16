@@ -1,7 +1,6 @@
 package Model.Statement;
 
-import Model.ADTs.MyIStack;
-import Model.Exceptions.InterpreterException;
+import Exceptions.InterpreterException;
 import Model.ProgramState;
 
 public class NopStatement implements IStatement{
@@ -9,8 +8,8 @@ public class NopStatement implements IStatement{
 
     @Override
     public ProgramState execute(ProgramState state) throws InterpreterException {
-        MyIStack<IStatement> stack = state.getExecutionStack();
-        state.setExecutionStack(stack);
+//        MyIStack<IStatement> stack = state.getExecutionStack();
+//        state.setExecutionStack(stack);
         return state;
     }
 

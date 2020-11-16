@@ -3,10 +3,10 @@ package Model.ADTs;
 import java.util.LinkedList;
 
 public class MyList<T> implements MyIList<T> {
-    LinkedList<T> list;
+    final LinkedList<T> list;
 
     public MyList() {
-        list = new LinkedList<T>();
+        list = new LinkedList<>();
     }
 
     @Override
