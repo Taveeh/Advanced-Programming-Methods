@@ -43,7 +43,12 @@ public class VariableDeclarationStatement implements IStatement {
         }
         state.setSymbolTable(table);
         state.setExecutionStack(stack);
-        return state;
+        return null;
+    }
+
+    @Override
+    public IStatement createCopy() {
+        return new VariableDeclarationStatement(name, type);
     }
 
     @Override

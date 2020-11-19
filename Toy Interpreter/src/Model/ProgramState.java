@@ -1,5 +1,7 @@
 package Model;
 
+import Exceptions.ExecutionException;
+import Exceptions.InterpreterException;
 import Model.ADTs.MyIDictionary;
 import Model.ADTs.MyIHeap;
 import Model.ADTs.MyIList;
@@ -18,7 +20,12 @@ public class ProgramState {
     MyIDictionary<StringValue, BufferedReader> fileTable;
     MyIHeap<Value> heapTable;
     IStatement originalProgram;
-
+    private static Integer lastID = 1;
+    private Integer id;
+    public synchronized void setId() {
+        lastID++;
+        id = lastID;
+    }
     public MyIHeap<Value> getHeapTable() {
         return heapTable;
     }
@@ -34,6 +41,7 @@ public class ProgramState {
         this.fileTable = fileTable;
         this.heapTable = heapTable;
         this.originalProgram = originalProgram;
+        id = 1;
         if (originalProgram != null) {
             executionStack.push(originalProgram);
         }
@@ -111,9 +119,20 @@ public class ProgramState {
             executionStack.push(originalProgram);
     }
 
+    public Boolean isNotCompleted() {
+        return !executionStack.isEmpty();
+    }
+    public ProgramState oneStep() throws InterpreterException {
+        if (executionStack.isEmpty()) {
+            throw new ExecutionException("Stack is empty");
+        }
+        IStatement currentStatement = executionStack.pop();
+        return currentStatement.execute(this);
+    }
     @Override
     public String toString() {
-        return " --------Execution Stack-------- \n" +
+        return  "ProgramID: --------- " + id.toString() + " ---------\n" +
+                " --------Execution Stack-------- \n" +
                 executionStack.toString() + '\n' +
                 " -------- Symbol  Table -------- \n" +
                 symbolTable.toString() + '\n' +

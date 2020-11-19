@@ -1,3 +1,4 @@
+ProgramID: --------- 1 ---------
  --------Execution Stack-------- 
 Ref (int) v; new(v,20); print(readHeap(v)); new(v,30); print(readHeap(v)+5)
 
@@ -13,6 +14,7 @@ Ref (int) v; new(v,20); print(readHeap(v)); new(v,30); print(readHeap(v)+5)
 
 
 
+ProgramID: --------- 1 ---------
  --------Execution Stack-------- 
 Ref (int) v
 new(v,20); print(readHeap(v)); new(v,30); print(readHeap(v)+5)
@@ -29,6 +31,24 @@ new(v,20); print(readHeap(v)); new(v,30); print(readHeap(v)+5)
 
 
 
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+Ref (int) v
+new(v,20); print(readHeap(v)); new(v,30); print(readHeap(v)+5)
+
+ -------- Symbol  Table -------- 
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
  --------Execution Stack-------- 
 new(v,20); print(readHeap(v)); new(v,30); print(readHeap(v)+5)
 
@@ -45,6 +65,24 @@ v -> (0, int)
 
 
 
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+new(v,20); print(readHeap(v)); new(v,30); print(readHeap(v)+5)
+
+ -------- Symbol  Table -------- 
+v -> (0, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
  --------Execution Stack-------- 
 new(v,20)
 print(readHeap(v)); new(v,30); print(readHeap(v)+5)
@@ -62,6 +100,25 @@ v -> (0, int)
 
 
 
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+new(v,20)
+print(readHeap(v)); new(v,30); print(readHeap(v)+5)
+
+ -------- Symbol  Table -------- 
+v -> (0, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
  --------Execution Stack-------- 
 print(readHeap(v)); new(v,30); print(readHeap(v)+5)
 
@@ -79,6 +136,25 @@ v -> (1, int)
 
 
 
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+print(readHeap(v)); new(v,30); print(readHeap(v)+5)
+
+ -------- Symbol  Table -------- 
+v -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
  --------Execution Stack-------- 
 print(readHeap(v))
 new(v,30); print(readHeap(v)+5)
@@ -97,6 +173,26 @@ v -> (1, int)
 
 
 
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+print(readHeap(v))
+new(v,30); print(readHeap(v)+5)
+
+ -------- Symbol  Table -------- 
+v -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
  --------Execution Stack-------- 
 new(v,30); print(readHeap(v)+5)
 
@@ -115,6 +211,26 @@ v -> (1, int)
 
 
 
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+new(v,30); print(readHeap(v)+5)
+
+ -------- Symbol  Table -------- 
+v -> (1, int)
+
+ -------- Output Console -------- 
+20
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
  --------Execution Stack-------- 
 new(v,30)
 print(readHeap(v)+5)
@@ -134,6 +250,27 @@ v -> (1, int)
 
 
 
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+new(v,30)
+print(readHeap(v)+5)
+
+ -------- Symbol  Table -------- 
+v -> (1, int)
+
+ -------- Output Console -------- 
+20
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
  --------Execution Stack-------- 
 print(readHeap(v)+5)
 
@@ -153,6 +290,26 @@ v -> (2, int)
 
 
 
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+print(readHeap(v)+5)
+
+ -------- Symbol  Table -------- 
+v -> (2, int)
+
+ -------- Output Console -------- 
+20
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+2 -> 30
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
  --------Execution Stack-------- 
 
  -------- Symbol  Table -------- 

@@ -45,7 +45,12 @@ public class WriteHeapStatement implements IStatement {
         }
         state.setSymbolTable(symbolTable);
         state.setHeapTable(heap);
-        return state;
+        return null;
+    }
+
+    @Override
+    public IStatement createCopy() {
+        return new WriteHeapStatement(variableName, expression);
     }
 
     @Override

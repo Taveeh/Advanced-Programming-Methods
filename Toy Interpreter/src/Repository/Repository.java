@@ -6,9 +6,10 @@ import Model.ProgramState;
 
 import java.io.*;
 import java.util.LinkedList;
+import java.util.List;
 
 public class Repository implements IRepository {
-    final LinkedList<ProgramState> programStates;
+    List<ProgramState> programStates;
     String logFilePath;
     public Repository() {
         programStates = new LinkedList<>();
@@ -25,30 +26,39 @@ public class Repository implements IRepository {
     }
     @Override
     public void addState(ProgramState state) {
-        programStates.addLast(state);
+        programStates.add(state);
     }
 
-    @Override
-    public ProgramState getCurrentProgram() {
-        ProgramState current = programStates.getFirst();
-//        programStates.removeFirst();
-        return current;
-    }
+//    @Override
+//    public ProgramState getCurrentProgram() {
+//        ProgramState current = programStates.get(0);
+////        programStates.removeFirst();
+//        return current;
+//    }
 
     @Override
-    public void logProgramStateExecution() throws InterpreterException {
+    public void logProgramStateExecution(ProgramState state) throws InterpreterException {
         PrintWriter logFile;
         try {
             logFile = new PrintWriter(new BufferedWriter(new FileWriter(logFilePath, true)));
         }catch (IOException exception) {
             throw new FileException(exception.getMessage());
         }
-        ProgramState state = programStates.getFirst();
         logFile.println(state.toString());
         logFile.flush();
         if (state.getExecutionStack().isEmpty()) {
             logFile.close();
-            programStates.removeFirst();
+            programStates.remove(0);
         }
+    }
+
+    @Override
+    public List<ProgramState> getProgramList() {
+        return programStates;
+    }
+
+    @Override
+    public void setProgramList(List<ProgramState> programStateList) {
+        programStates = programStateList;
     }
 }

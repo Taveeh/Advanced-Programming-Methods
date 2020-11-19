@@ -19,7 +19,12 @@ public class CompoundStatement implements IStatement {
         stack.push(secondStatement);
         stack.push(firstStatement);
         state.setExecutionStack(stack);
-        return state;
+        return null;
+    }
+
+    @Override
+    public IStatement createCopy() {
+        return new CompoundStatement(firstStatement, secondStatement);
     }
 
     @Override

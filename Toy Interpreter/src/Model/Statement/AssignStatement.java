@@ -41,7 +41,12 @@ public class AssignStatement implements IStatement{
         }
         state.setExecutionStack(stack);
         state.setSymbolTable(table);
-        return state;
+        return null;
+    }
+
+    @Override
+    public IStatement createCopy() {
+        return new AssignStatement(id, expression);
     }
 
     @Override

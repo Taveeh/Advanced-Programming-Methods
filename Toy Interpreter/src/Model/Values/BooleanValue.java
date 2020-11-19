@@ -35,5 +35,10 @@ public class BooleanValue implements Value {
         return new BooleanType();
     }
 
+    @Override
+    public Value createCopy() {
+        return new BooleanValue(value);
+    }
+
 
 }

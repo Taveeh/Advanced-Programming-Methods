@@ -27,6 +27,11 @@ public class StringValue implements Value {
     }
 
     @Override
+    public Value createCopy() {
+        return new StringValue(value);
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof StringValue)) return false;

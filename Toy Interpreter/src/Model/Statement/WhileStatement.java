@@ -33,7 +33,12 @@ public class WhileStatement implements IStatement {
         }
 
         state.setExecutionStack(stack);
-        return state;
+        return null;
+    }
+
+    @Override
+    public IStatement createCopy() {
+        return new WhileStatement(expression, statement);
     }
 
     @Override

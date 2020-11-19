@@ -44,7 +44,12 @@ public class OpenReadFileStatement implements IStatement {
         state.setExecutionStack(stack);
         state.setSymbolTable(table);
         state.setFileTable(fileTable);
-        return state;
+        return null;
+    }
+
+    @Override
+    public IStatement createCopy() {
+        return new OpenReadFileStatement(expression);
     }
 
     @Override

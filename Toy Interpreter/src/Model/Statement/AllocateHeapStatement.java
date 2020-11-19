@@ -48,7 +48,12 @@ public class AllocateHeapStatement implements IStatement{
         state.setHeapTable(heapTable);
         state.setSymbolTable(symbolTable);
         state.setExecutionStack(stack);
-        return state;
+        return null;
+    }
+
+    @Override
+    public IStatement createCopy() {
+        return new AllocateHeapStatement(variableName, expression);
     }
 
     @Override

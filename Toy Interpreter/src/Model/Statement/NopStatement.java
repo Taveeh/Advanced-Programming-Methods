@@ -10,7 +10,12 @@ public class NopStatement implements IStatement{
     public ProgramState execute(ProgramState state) throws InterpreterException {
 //        MyIStack<IStatement> stack = state.getExecutionStack();
 //        state.setExecutionStack(stack);
-        return state;
+        return null;
+    }
+
+    @Override
+    public IStatement createCopy() {
+        return new NopStatement();
     }
 
     @Override

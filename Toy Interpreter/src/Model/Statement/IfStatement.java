@@ -38,7 +38,11 @@ public class IfStatement implements IStatement {
             stack.push(elseStatement);
         }
         state.setExecutionStack(stack);
-        return state;
+        return null;
     }
 
+    @Override
+    public IStatement createCopy() {
+        return new IfStatement(expression, thenStatement, elseStatement);
+    }
 }

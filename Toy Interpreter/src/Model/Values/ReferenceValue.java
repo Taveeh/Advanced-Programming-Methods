@@ -12,6 +12,11 @@ public class ReferenceValue implements Value {
         this.locationType = locationType;
     }
 
+    @Override
+    public Value createCopy() {
+        return new ReferenceValue(address, locationType);
+    }
+
     public int getAddress() {
         return address;
     }

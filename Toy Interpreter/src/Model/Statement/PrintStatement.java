@@ -26,6 +26,11 @@ public class PrintStatement implements IStatement {
         outConsole.addElement(expression.evaluateExpression(state.getSymbolTable(), state.getHeapTable()));
         state.setExecutionStack(stack);
         state.setOutputConsole(outConsole);
-        return state;
+        return null;
+    }
+
+    @Override
+    public IStatement createCopy() {
+        return new PrintStatement(expression);
     }
 }

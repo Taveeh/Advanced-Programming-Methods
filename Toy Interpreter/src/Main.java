@@ -461,9 +461,88 @@ public class Main {
                 )
         );
     }
+
+    private static final IStatement example10;
+
+    static {
+        example10 = new CompoundStatement(
+                new VariableDeclarationStatement(
+                        "v",
+                        new IntegerType()
+                ),
+                new CompoundStatement(
+                        new VariableDeclarationStatement(
+                                "a",
+                                new ReferenceType(
+                                        new IntegerType()
+                                )
+                        ),
+                        new CompoundStatement(
+                                new AssignStatement(
+                                        "v",
+                                        new ValueExpression(
+                                                new IntegerValue(10)
+                                        )
+                                ),
+                                new CompoundStatement(
+                                        new AllocateHeapStatement(
+                                                "a",
+                                                new ValueExpression(
+                                                        new IntegerValue(22)
+                                                )
+                                        ),
+                                        new CompoundStatement(
+                                                new ForkStatement(
+                                                        new CompoundStatement(
+                                                                new WriteHeapStatement(
+                                                                        "a",
+                                                                        new ValueExpression(
+                                                                                new IntegerValue(30)
+                                                                        )
+                                                                ),
+                                                                new CompoundStatement(
+                                                                        new AssignStatement(
+                                                                                "v",
+                                                                                new ValueExpression(
+                                                                                        new IntegerValue(32)
+                                                                                )
+                                                                        ),
+                                                                        new CompoundStatement(
+                                                                                new PrintStatement(
+                                                                                        new VariableExpression("v")
+                                                                                ),
+                                                                                new PrintStatement(
+                                                                                        new ReadHeapExpression(
+                                                                                                new VariableExpression(
+                                                                                                        "a"
+                                                                                                )
+                                                                                        )
+                                                                                )
+                                                                        )
+                                                                )
+                                                        )
+                                                ),
+                                                new CompoundStatement(
+                                                        new PrintStatement(
+                                                                new VariableExpression(
+                                                                        "v"
+                                                                )
+                                                        ),
+                                                        new PrintStatement(
+                                                                new ReadHeapExpression(
+                                                                        new VariableExpression("a")
+                                                                )
+                                                        )
+                                                )
+                                        )
+                                )
+                        )
+                )
+        );
+    }
     public static void main(String[] args) {
-        ProgramState state1, state2, state3, state4, state5, state6, state7, state8, state9;
-        Controller controller1, controller2, controller3, controller4, controller5, controller6, controller7, controller8, controller9;
+        ProgramState state1, state2, state3, state4, state5, state6, state7, state8, state9, state10;
+        Controller controller1, controller2, controller3, controller4, controller5, controller6, controller7, controller8, controller9, controller10;
         try {
             state1 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap<>(), example1);
             IRepository repository1 = new Repository("LogExample1.txt");
@@ -510,6 +589,11 @@ public class Main {
             repository9.addState(state9);
             controller9 = new Controller(repository9);
 
+            state10 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap<>(), example10);
+            IRepository repository10 = new Repository("LogExample10.txt");
+            repository10.addState(state10);
+            controller10 = new Controller(repository10);
+
             TextMenu textMenu = new TextMenu();
             textMenu.addCommand(new ExitCommand("0", "exit"));
             textMenu.addCommand(new RunExampleCommand("1", example1.toString(), controller1));
@@ -521,6 +605,7 @@ public class Main {
             textMenu.addCommand(new RunExampleCommand("7", example7.toString(), controller7));
             textMenu.addCommand(new RunExampleCommand("8", example8.toString(), controller8));
             textMenu.addCommand(new RunExampleCommand("9", example9.toString(), controller9));
+            textMenu.addCommand(new RunExampleCommand("10", example10.toString(), controller10));
             textMenu.show();
         } catch (InterpreterException exception) {
             System.out.println(exception.getMessage());

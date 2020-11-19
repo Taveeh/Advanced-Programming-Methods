@@ -27,6 +27,11 @@ public class IntegerValue implements Value {
     }
 
     @Override
+    public Value createCopy() {
+        return new IntegerValue(value);
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof IntegerValue)) return false;

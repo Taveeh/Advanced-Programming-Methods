@@ -46,7 +46,12 @@ public class CloseReadFileExpression implements IStatement {
         state.setExecutionStack(stack);
         state.setSymbolTable(table);
         state.setFileTable(fileTable);
-        return state;
+        return null;
+    }
+
+    @Override
+    public IStatement createCopy() {
+        return new CloseReadFileExpression(expression);
     }
 
     @Override

@@ -26,6 +26,11 @@ public class ReadFileStatement implements IStatement {
     }
 
     @Override
+    public IStatement createCopy() {
+        return new ReadFileStatement(expression, variableName);
+    }
+
+    @Override
     public ProgramState execute(ProgramState state) throws InterpreterException {
         MyIStack<IStatement> stack = state.getExecutionStack();
         MyIDictionary<String, Value> table = state.getSymbolTable();
@@ -62,7 +67,7 @@ public class ReadFileStatement implements IStatement {
         state.setFileTable(fileTable);
         state.setSymbolTable(table);
         state.setExecutionStack(stack);
-        return state;
+        return null;
     }
 
     @Override
