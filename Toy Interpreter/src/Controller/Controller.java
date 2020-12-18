@@ -1,17 +1,13 @@
 package Controller;
 
-import Model.ADTs.*;
 import Exceptions.InterpreterException;
 import Model.ProgramState;
-import Model.Statement.*;
 import Model.Values.ReferenceValue;
 import Model.Values.Value;
 import Repository.IRepository;
 
-import java.sql.Ref;
 import java.util.*;
 import java.util.concurrent.*;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -20,7 +16,7 @@ public class Controller {
     Boolean displayAll;
     ExecutorService executor;
 
-    private Map<Integer, Value> unsafeGarbageCollector(List<Integer> symbolTableAddresses, Map<Integer, Value> heap) {
+    private Map<Integer, Value> safeGarbageCollector(List<Integer> symbolTableAddresses, Map<Integer, Value> heap) {
         return heap.entrySet().stream()
                 .filter(e -> symbolTableAddresses.contains(e.getKey()))
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
@@ -113,7 +109,7 @@ public class Controller {
                 .reduce(Stream::concat).orElse(null)).collect(Collectors.toList());
         programStateList.forEach(programState -> {
             programState.getHeapTable().setContent(
-                    unsafeGarbageCollector(
+                    safeGarbageCollector(
                         heap,
                         programStateList.get(0).getHeapTable().getContent()
             ));
@@ -184,5 +180,9 @@ public class Controller {
 
     public String getOutput(ProgramState state) {
         return state.getOutputConsole().toString();
+    }
+
+    public void typeCheck() throws InterpreterException {
+        repository.getProgramList().get(0).typeCheck();
     }
 }

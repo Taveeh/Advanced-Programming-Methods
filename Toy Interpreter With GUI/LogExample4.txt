@@ -1,0 +1,645 @@
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+string varf; varf = test.in; open(varf); int varc; readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeReadFile(varf)
+
+ -------- Symbol  Table -------- 
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+string varf
+varf = test.in; open(varf); int varc; readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeReadFile(varf)
+
+ -------- Symbol  Table -------- 
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+string varf
+varf = test.in; open(varf); int varc; readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeReadFile(varf)
+
+ -------- Symbol  Table -------- 
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+varf = test.in; open(varf); int varc; readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeReadFile(varf)
+
+ -------- Symbol  Table -------- 
+varf -> 
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+varf = test.in; open(varf); int varc; readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeReadFile(varf)
+
+ -------- Symbol  Table -------- 
+varf -> 
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+varf = test.in
+open(varf); int varc; readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeReadFile(varf)
+
+ -------- Symbol  Table -------- 
+varf -> 
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+varf = test.in
+open(varf); int varc; readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeReadFile(varf)
+
+ -------- Symbol  Table -------- 
+varf -> 
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+open(varf); int varc; readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeReadFile(varf)
+
+ -------- Symbol  Table -------- 
+varf -> test.in
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+open(varf); int varc; readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeReadFile(varf)
+
+ -------- Symbol  Table -------- 
+varf -> test.in
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+open(varf)
+int varc; readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeReadFile(varf)
+
+ -------- Symbol  Table -------- 
+varf -> test.in
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+open(varf)
+int varc; readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeReadFile(varf)
+
+ -------- Symbol  Table -------- 
+varf -> test.in
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+int varc; readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeReadFile(varf)
+
+ -------- Symbol  Table -------- 
+varf -> test.in
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+test.in -> java.io.BufferedReader@61110bc0
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+int varc; readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeReadFile(varf)
+
+ -------- Symbol  Table -------- 
+varf -> test.in
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+test.in -> java.io.BufferedReader@61110bc0
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+int varc
+readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeReadFile(varf)
+
+ -------- Symbol  Table -------- 
+varf -> test.in
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+test.in -> java.io.BufferedReader@61110bc0
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+int varc
+readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeReadFile(varf)
+
+ -------- Symbol  Table -------- 
+varf -> test.in
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+test.in -> java.io.BufferedReader@61110bc0
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeReadFile(varf)
+
+ -------- Symbol  Table -------- 
+varf -> test.in
+varc -> 0
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+test.in -> java.io.BufferedReader@61110bc0
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeReadFile(varf)
+
+ -------- Symbol  Table -------- 
+varf -> test.in
+varc -> 0
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+test.in -> java.io.BufferedReader@61110bc0
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+readFile(varf, varc)
+print(varc); readFile(varf, varc); print(varc); closeReadFile(varf)
+
+ -------- Symbol  Table -------- 
+varf -> test.in
+varc -> 0
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+test.in -> java.io.BufferedReader@61110bc0
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+readFile(varf, varc)
+print(varc); readFile(varf, varc); print(varc); closeReadFile(varf)
+
+ -------- Symbol  Table -------- 
+varf -> test.in
+varc -> 0
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+test.in -> java.io.BufferedReader@61110bc0
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+print(varc); readFile(varf, varc); print(varc); closeReadFile(varf)
+
+ -------- Symbol  Table -------- 
+varf -> test.in
+varc -> 20
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+test.in -> java.io.BufferedReader@61110bc0
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+print(varc); readFile(varf, varc); print(varc); closeReadFile(varf)
+
+ -------- Symbol  Table -------- 
+varf -> test.in
+varc -> 20
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+test.in -> java.io.BufferedReader@61110bc0
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+print(varc)
+readFile(varf, varc); print(varc); closeReadFile(varf)
+
+ -------- Symbol  Table -------- 
+varf -> test.in
+varc -> 20
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+test.in -> java.io.BufferedReader@61110bc0
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+print(varc)
+readFile(varf, varc); print(varc); closeReadFile(varf)
+
+ -------- Symbol  Table -------- 
+varf -> test.in
+varc -> 20
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+test.in -> java.io.BufferedReader@61110bc0
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+readFile(varf, varc); print(varc); closeReadFile(varf)
+
+ -------- Symbol  Table -------- 
+varf -> test.in
+varc -> 20
+
+ -------- Output Console -------- 
+20
+
+ --------  File  Table  -------- 
+test.in -> java.io.BufferedReader@61110bc0
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+readFile(varf, varc); print(varc); closeReadFile(varf)
+
+ -------- Symbol  Table -------- 
+varf -> test.in
+varc -> 20
+
+ -------- Output Console -------- 
+20
+
+ --------  File  Table  -------- 
+test.in -> java.io.BufferedReader@61110bc0
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+readFile(varf, varc)
+print(varc); closeReadFile(varf)
+
+ -------- Symbol  Table -------- 
+varf -> test.in
+varc -> 20
+
+ -------- Output Console -------- 
+20
+
+ --------  File  Table  -------- 
+test.in -> java.io.BufferedReader@61110bc0
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+readFile(varf, varc)
+print(varc); closeReadFile(varf)
+
+ -------- Symbol  Table -------- 
+varf -> test.in
+varc -> 20
+
+ -------- Output Console -------- 
+20
+
+ --------  File  Table  -------- 
+test.in -> java.io.BufferedReader@61110bc0
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+print(varc); closeReadFile(varf)
+
+ -------- Symbol  Table -------- 
+varf -> test.in
+varc -> 35
+
+ -------- Output Console -------- 
+20
+
+ --------  File  Table  -------- 
+test.in -> java.io.BufferedReader@61110bc0
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+print(varc); closeReadFile(varf)
+
+ -------- Symbol  Table -------- 
+varf -> test.in
+varc -> 35
+
+ -------- Output Console -------- 
+20
+
+ --------  File  Table  -------- 
+test.in -> java.io.BufferedReader@61110bc0
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+print(varc)
+closeReadFile(varf)
+
+ -------- Symbol  Table -------- 
+varf -> test.in
+varc -> 35
+
+ -------- Output Console -------- 
+20
+
+ --------  File  Table  -------- 
+test.in -> java.io.BufferedReader@61110bc0
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+print(varc)
+closeReadFile(varf)
+
+ -------- Symbol  Table -------- 
+varf -> test.in
+varc -> 35
+
+ -------- Output Console -------- 
+20
+
+ --------  File  Table  -------- 
+test.in -> java.io.BufferedReader@61110bc0
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+closeReadFile(varf)
+
+ -------- Symbol  Table -------- 
+varf -> test.in
+varc -> 35
+
+ -------- Output Console -------- 
+20
+35
+
+ --------  File  Table  -------- 
+test.in -> java.io.BufferedReader@61110bc0
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+closeReadFile(varf)
+
+ -------- Symbol  Table -------- 
+varf -> test.in
+varc -> 35
+
+ -------- Output Console -------- 
+20
+35
+
+ --------  File  Table  -------- 
+test.in -> java.io.BufferedReader@61110bc0
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+
+ -------- Symbol  Table -------- 
+varf -> test.in
+varc -> 35
+
+ -------- Output Console -------- 
+20
+35
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+

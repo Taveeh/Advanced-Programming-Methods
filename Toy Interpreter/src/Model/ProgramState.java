@@ -2,11 +2,8 @@ package Model;
 
 import Exceptions.ExecutionException;
 import Exceptions.InterpreterException;
-import Model.ADTs.MyIDictionary;
-import Model.ADTs.MyIHeap;
-import Model.ADTs.MyIList;
+import Model.ADTs.*;
 import Model.Statement.IStatement;
-import Model.ADTs.MyIStack;
 import Model.Values.StringValue;
 import Model.Values.Value;
 
@@ -34,6 +31,9 @@ public class ProgramState {
         this.heapTable = heapTable;
     }
 
+    public void typeCheck() throws InterpreterException{
+        originalProgram.typecheck(new MyDictionary<>());
+    }
     public ProgramState(MyIStack<IStatement> executionStack, MyIDictionary<String, Value> symbolTable, MyIList<Value> outputConsole, MyIDictionary<StringValue, BufferedReader> fileTable, MyIHeap<Value> heapTable, IStatement originalProgram) {
         this.executionStack = executionStack;
         this.symbolTable = symbolTable;
