@@ -1,11 +1,5 @@
-import Controller.Controller;
-import Exceptions.InterpreterException;
-import Model.ADTs.MyDictionary;
-import Model.ADTs.MyHeap;
-import Model.ADTs.MyList;
-import Model.ADTs.MyStack;
+import GUI.ChooseProgramController;
 import Model.Expression.*;
-import Model.ProgramState;
 import Model.Statement.*;
 import Model.Types.BooleanType;
 import Model.Types.IntegerType;
@@ -14,13 +8,57 @@ import Model.Types.StringType;
 import Model.Values.BooleanValue;
 import Model.Values.IntegerValue;
 import Model.Values.StringValue;
-import Repository.IRepository;
-import Repository.Repository;
-import View.Command.ExitCommand;
-import View.Command.RunExampleCommand;
-import View.TextMenu;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.geometry.Rectangle2D;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.layout.GridPane;
+import javafx.stage.Screen;
+import javafx.stage.Stage;
 
-public class Main {
+public class Main extends Application {
+    ChooseProgramController chooseProgramController;
+
+    @Override
+    public void start(Stage primaryStage) {
+        try {
+            Rectangle2D screenBounds = Screen.getPrimary().getBounds();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("GUI/ChooseProgramStyle.fxml"));
+            GridPane root = (GridPane) loader.load();
+            chooseProgramController = loader.getController();
+            addStatementsToController();
+            chooseProgramController.setMenuStage(primaryStage);
+            Scene scene = new Scene(root, screenBounds.getWidth() / 3, screenBounds.getHeight());
+            scene.getStylesheets().add(getClass().getResource("GUI/application.css").toExternalForm());
+            primaryStage.setTitle("Toy Language Menu");
+            primaryStage.setScene(scene);
+            primaryStage.setX(0);
+            primaryStage.setY(0);
+            primaryStage.getIcons().add(new Image(Main.class.getResourceAsStream("GUI/pokemon.png")));
+
+            primaryStage.show();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void addStatementsToController() {
+        chooseProgramController.addStatement(example1);
+        chooseProgramController.addStatement(example2);
+        chooseProgramController.addStatement(example3);
+        chooseProgramController.addStatement(example4);
+        chooseProgramController.addStatement(example5);
+        chooseProgramController.addStatement(example6);
+        chooseProgramController.addStatement(example7);
+        chooseProgramController.addStatement(example8);
+        chooseProgramController.addStatement(example9);
+        chooseProgramController.addStatement(example10);
+        chooseProgramController.addStatement(example11);
+
+    }
+
     private static final IStatement example1;
 
     static {
@@ -339,13 +377,13 @@ public class Main {
                                                 ),
                                                 new AssignStatement(
                                                         "v",
-                                                            new ArithmeticExpression(
-                                                                    '-',
-                                                                    new VariableExpression("v"),
-                                                                    new ValueExpression(
-                                                                            new IntegerValue(1)
-                                                                    )
-                                                            )
+                                                        new ArithmeticExpression(
+                                                                '-',
+                                                                new VariableExpression("v"),
+                                                                new ValueExpression(
+                                                                        new IntegerValue(1)
+                                                                )
+                                                        )
                                                 )
                                         )
                                 ),
@@ -562,88 +600,9 @@ public class Main {
                 )
         );
     }
-    
 
     public static void main(String[] args) {
-        ProgramState state1, state2, state3, state4, state5, state6, state7, state8, state9, state10, state11, state12;
-        Controller controller1, controller2, controller3, controller4, controller5, controller6, controller7, controller8, controller9, controller10, controller11, controller12;
-        try {
-            state1 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap<>(), example1);
-            IRepository repository1 = new Repository("LogExample1.txt");
-            repository1.addState(state1);
-            controller1 = new Controller(repository1);
-
-            state2 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap<>(), example2);
-            IRepository repository2 = new Repository("LogExample2.txt");
-            repository2.addState(state2);
-            controller2 = new Controller(repository2);
-
-            state3 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap<>(), example3);
-            IRepository repository3 = new Repository("LogExample3.txt");
-            repository3.addState(state3);
-            controller3 = new Controller(repository3);
-
-            state4 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap<>(), example4);
-            IRepository repository4 = new Repository("LogExample4.txt");
-            repository4.addState(state4);
-            controller4 = new Controller(repository4);
-
-            state5 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap<>(), example5);
-            IRepository repository5 = new Repository("LogExample5.txt");
-            repository5.addState(state5);
-            controller5 = new Controller(repository5);
-
-            state6 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap<>(), example6);
-            IRepository repository6 = new Repository("LogExample6.txt");
-            repository6.addState(state6);
-            controller6 = new Controller(repository6);
-
-            state7 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap<>(), example7);
-            IRepository repository7 = new Repository("LogExample7.txt");
-            repository7.addState(state7);
-            controller7 = new Controller(repository7);
-
-            state8 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap<>(), example8);
-            IRepository repository8 = new Repository("LogExample8.txt");
-            repository8.addState(state8);
-            controller8 = new Controller(repository8);
-
-            state9 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap<>(), example9);
-            IRepository repository9 = new Repository("LogExample9.txt");
-            repository9.addState(state9);
-            controller9 = new Controller(repository9);
-
-            state10 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap<>(), example10);
-            IRepository repository10 = new Repository("LogExample10.txt");
-            repository10.addState(state10);
-            controller10 = new Controller(repository10);
-
-            state11 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap<>(), example11);
-            IRepository repository11 = new Repository("LogExample11.txt");
-            repository11.addState(state11);
-            controller11 = new Controller(repository11);
-
-
-            TextMenu textMenu = new TextMenu();
-            textMenu.addCommand(new ExitCommand("0", "exit"));
-            textMenu.addCommand(new RunExampleCommand("1", example1.toString(), controller1));
-            textMenu.addCommand(new RunExampleCommand("2", example2.toString(), controller2));
-            textMenu.addCommand(new RunExampleCommand("3", example3.toString(), controller3));
-            textMenu.addCommand(new RunExampleCommand("4", example4.toString(), controller4));
-            textMenu.addCommand(new RunExampleCommand("5", example5.toString(), controller5));
-            textMenu.addCommand(new RunExampleCommand("6", example6.toString(), controller6));
-            textMenu.addCommand(new RunExampleCommand("7", example7.toString(), controller7));
-            textMenu.addCommand(new RunExampleCommand("8", example8.toString(), controller8));
-            textMenu.addCommand(new RunExampleCommand("9", example9.toString(), controller9));
-            textMenu.addCommand(new RunExampleCommand("10", example10.toString(), controller10));
-            textMenu.addCommand(new RunExampleCommand("11", example11.toString(), controller11));
-
-            textMenu.show();
-
-        } catch (InterpreterException exception) {
-            System.out.println(exception.getMessage());
-        }
-
+        launch(args);
     }
-
 }
+

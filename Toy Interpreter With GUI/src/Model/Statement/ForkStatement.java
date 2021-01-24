@@ -30,6 +30,7 @@ public class ForkStatement implements IStatement {
             newSymbolTable.add(entry.getKey(), entry.getValue().createCopy());
         }
         MyIStack <IStatement> stack = new MyStack<>();
+        stack.push(new NopStatement());
         stack.push(statement);
         ProgramState newProgram = new ProgramState(stack, newSymbolTable, state.getOutputConsole(), state.getFileTable(), state.getHeapTable());
         newProgram.setId();

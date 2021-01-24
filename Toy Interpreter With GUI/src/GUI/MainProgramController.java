@@ -2,23 +2,20 @@ package GUI;
 
 import Controller.Controller;
 import Exceptions.InterpreterException;
-import Model.ADTs.MyDictionary;
-import Model.ADTs.MyHeap;
-import Model.ADTs.MyList;
-import Model.ADTs.MyStack;
+import Model.ADTs.*;
 import Model.ProgramState;
 import Model.Statement.IStatement;
-import Model.Values.StringValue;
+import Model.Statement.NopStatement;
 import Model.Values.Value;
 import Repository.IRepository;
 import Repository.Repository;
 import javafx.beans.property.ReadOnlyObjectWrapper;
-import javafx.beans.value.ChangeListener;
+
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
+
 import javafx.util.Callback;
 import javafx.util.Pair;
 
@@ -58,13 +55,14 @@ public class MainProgramController {
     private TextField numberOfStatesTextField;
 
 
-    private ProgramState programState;
     private Controller controller;
     List<ProgramState> programStateList;
 
     public void setProgramState(IStatement statement, int index) throws InterpreterException {
         String file = "LogExample" + index + ".txt";
-        ProgramState state = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap<>(), statement);
+        MyIStack<IStatement> stack = new MyStack();
+        stack.push(new NopStatement());
+        ProgramState state = new ProgramState(stack, new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap<>(), statement);
         IRepository repository = new Repository(file);
         repository.addState(state);
         controller = new Controller(repository);

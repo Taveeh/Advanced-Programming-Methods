@@ -2,6 +2,8 @@ ProgramID: --------- 1 ---------
  --------Execution Stack-------- 
 int v; Ref (int) a; v = 10; new(a,22); fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
 
+
+
  -------- Symbol  Table -------- 
 
  -------- Output Console -------- 
@@ -19,6 +21,8 @@ ProgramID: --------- 1 ---------
 int v
 Ref (int) a; v = 10; new(a,22); fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
 
+
+
  -------- Symbol  Table -------- 
 
  -------- Output Console -------- 
@@ -36,6 +40,8 @@ ProgramID: --------- 1 ---------
 int v
 Ref (int) a; v = 10; new(a,22); fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
 
+
+
  -------- Symbol  Table -------- 
 
  -------- Output Console -------- 
@@ -51,6 +57,8 @@ Ref (int) a; v = 10; new(a,22); fork(writeHeap(a, 30); v = 32; print(v); print(r
 ProgramID: --------- 1 ---------
  --------Execution Stack-------- 
 Ref (int) a; v = 10; new(a,22); fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
+
+
 
  -------- Symbol  Table -------- 
 v -> 0
@@ -68,6 +76,8 @@ v -> 0
 ProgramID: --------- 1 ---------
  --------Execution Stack-------- 
 Ref (int) a; v = 10; new(a,22); fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
+
+
 
  -------- Symbol  Table -------- 
 v -> 0
@@ -87,6 +97,8 @@ ProgramID: --------- 1 ---------
 Ref (int) a
 v = 10; new(a,22); fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
 
+
+
  -------- Symbol  Table -------- 
 v -> 0
 
@@ -105,6 +117,8 @@ ProgramID: --------- 1 ---------
 Ref (int) a
 v = 10; new(a,22); fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
 
+
+
  -------- Symbol  Table -------- 
 v -> 0
 
@@ -121,6 +135,8 @@ v -> 0
 ProgramID: --------- 1 ---------
  --------Execution Stack-------- 
 v = 10; new(a,22); fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
+
+
 
  -------- Symbol  Table -------- 
 a -> (0, int)
@@ -139,6 +155,8 @@ v -> 0
 ProgramID: --------- 1 ---------
  --------Execution Stack-------- 
 v = 10; new(a,22); fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
+
+
 
  -------- Symbol  Table -------- 
 a -> (0, int)
@@ -159,6 +177,8 @@ ProgramID: --------- 1 ---------
 v = 10
 new(a,22); fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
 
+
+
  -------- Symbol  Table -------- 
 a -> (0, int)
 v -> 0
@@ -178,6 +198,8 @@ ProgramID: --------- 1 ---------
 v = 10
 new(a,22); fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
 
+
+
  -------- Symbol  Table -------- 
 a -> (0, int)
 v -> 0
@@ -196,6 +218,8 @@ ProgramID: --------- 1 ---------
  --------Execution Stack-------- 
 new(a,22); fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
 
+
+
  -------- Symbol  Table -------- 
 a -> (0, int)
 v -> 10
@@ -214,6 +238,8 @@ ProgramID: --------- 1 ---------
  --------Execution Stack-------- 
 new(a,22); fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
 
+
+
  -------- Symbol  Table -------- 
 a -> (0, int)
 v -> 10
@@ -233,6 +259,8 @@ ProgramID: --------- 1 ---------
 new(a,22)
 fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
 
+
+
  -------- Symbol  Table -------- 
 a -> (0, int)
 v -> 10
@@ -252,6 +280,8 @@ ProgramID: --------- 1 ---------
 new(a,22)
 fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
 
+
+
  -------- Symbol  Table -------- 
 a -> (0, int)
 v -> 10
@@ -269,6 +299,8 @@ v -> 10
 ProgramID: --------- 1 ---------
  --------Execution Stack-------- 
 fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
+
+
 
  -------- Symbol  Table -------- 
 a -> (1, int)
@@ -288,6 +320,8 @@ v -> 10
 ProgramID: --------- 1 ---------
  --------Execution Stack-------- 
 fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
+
+
 
  -------- Symbol  Table -------- 
 a -> (1, int)
@@ -309,6 +343,8 @@ ProgramID: --------- 1 ---------
 fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a)))
 print(v); print(readHeap(a))
 
+
+
  -------- Symbol  Table -------- 
 a -> (1, int)
 v -> 10
@@ -329,43 +365,7 @@ ProgramID: --------- 1 ---------
 fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a)))
 print(v); print(readHeap(a))
 
- -------- Symbol  Table -------- 
-a -> (1, int)
-v -> 10
 
- -------- Output Console -------- 
-
- --------  File  Table  -------- 
-
- --------  Heap  Table  -------- 
-1 -> 22
-
- ------------------------------- 
-
-
-
-ProgramID: --------- 1 ---------
- --------Execution Stack-------- 
-print(v); print(readHeap(a))
-
- -------- Symbol  Table -------- 
-a -> (1, int)
-v -> 10
-
- -------- Output Console -------- 
-
- --------  File  Table  -------- 
-
- --------  Heap  Table  -------- 
-1 -> 22
-
- ------------------------------- 
-
-
-
-ProgramID: --------- 2 ---------
- --------Execution Stack-------- 
-writeHeap(a, 30); v = 32; print(v); print(readHeap(a))
 
  -------- Symbol  Table -------- 
 a -> (1, int)
@@ -386,6 +386,8 @@ ProgramID: --------- 1 ---------
  --------Execution Stack-------- 
 print(v); print(readHeap(a))
 
+
+
  -------- Symbol  Table -------- 
 a -> (1, int)
 v -> 10
@@ -404,6 +406,50 @@ v -> 10
 ProgramID: --------- 2 ---------
  --------Execution Stack-------- 
 writeHeap(a, 30); v = 32; print(v); print(readHeap(a))
+
+
+
+ -------- Symbol  Table -------- 
+a -> (1, int)
+v -> 10
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 22
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+print(v); print(readHeap(a))
+
+
+
+ -------- Symbol  Table -------- 
+a -> (1, int)
+v -> 10
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 22
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 2 ---------
+ --------Execution Stack-------- 
+writeHeap(a, 30); v = 32; print(v); print(readHeap(a))
+
+
 
  -------- Symbol  Table -------- 
 a -> (1, int)
@@ -425,6 +471,8 @@ ProgramID: --------- 1 ---------
 print(v)
 print(readHeap(a))
 
+
+
  -------- Symbol  Table -------- 
 a -> (1, int)
 v -> 10
@@ -444,6 +492,8 @@ ProgramID: --------- 2 ---------
  --------Execution Stack-------- 
 writeHeap(a, 30)
 v = 32; print(v); print(readHeap(a))
+
+
 
  -------- Symbol  Table -------- 
 a -> (1, int)
@@ -465,6 +515,8 @@ ProgramID: --------- 1 ---------
 print(v)
 print(readHeap(a))
 
+
+
  -------- Symbol  Table -------- 
 a -> (1, int)
 v -> 10
@@ -485,6 +537,8 @@ ProgramID: --------- 2 ---------
 writeHeap(a, 30)
 v = 32; print(v); print(readHeap(a))
 
+
+
  -------- Symbol  Table -------- 
 a -> (1, int)
 v -> 10
@@ -504,6 +558,8 @@ ProgramID: --------- 1 ---------
  --------Execution Stack-------- 
 print(readHeap(a))
 
+
+
  -------- Symbol  Table -------- 
 a -> (1, int)
 v -> 10
@@ -523,6 +579,8 @@ v -> 10
 ProgramID: --------- 2 ---------
  --------Execution Stack-------- 
 v = 32; print(v); print(readHeap(a))
+
+
 
  -------- Symbol  Table -------- 
 a -> (1, int)
@@ -544,6 +602,8 @@ ProgramID: --------- 1 ---------
  --------Execution Stack-------- 
 print(readHeap(a))
 
+
+
  -------- Symbol  Table -------- 
 a -> (1, int)
 v -> 10
@@ -564,6 +624,8 @@ ProgramID: --------- 2 ---------
  --------Execution Stack-------- 
 v = 32; print(v); print(readHeap(a))
 
+
+
  -------- Symbol  Table -------- 
 a -> (1, int)
 v -> 10
@@ -582,6 +644,8 @@ v -> 10
 
 ProgramID: --------- 1 ---------
  --------Execution Stack-------- 
+
+
 
  -------- Symbol  Table -------- 
 a -> (1, int)
@@ -605,6 +669,30 @@ ProgramID: --------- 2 ---------
 v = 32
 print(v); print(readHeap(a))
 
+
+
+ -------- Symbol  Table -------- 
+a -> (1, int)
+v -> 10
+
+ -------- Output Console -------- 
+10
+30
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 30
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+
+
+
  -------- Symbol  Table -------- 
 a -> (1, int)
 v -> 10
@@ -627,6 +715,28 @@ ProgramID: --------- 2 ---------
 v = 32
 print(v); print(readHeap(a))
 
+
+
+ -------- Symbol  Table -------- 
+a -> (1, int)
+v -> 10
+
+ -------- Output Console -------- 
+10
+30
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 30
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+
  -------- Symbol  Table -------- 
 a -> (1, int)
 v -> 10
@@ -648,6 +758,8 @@ ProgramID: --------- 2 ---------
  --------Execution Stack-------- 
 print(v); print(readHeap(a))
 
+
+
  -------- Symbol  Table -------- 
 a -> (1, int)
 v -> 32
@@ -669,6 +781,8 @@ ProgramID: --------- 2 ---------
  --------Execution Stack-------- 
 print(v); print(readHeap(a))
 
+
+
  -------- Symbol  Table -------- 
 a -> (1, int)
 v -> 32
@@ -691,6 +805,8 @@ ProgramID: --------- 2 ---------
 print(v)
 print(readHeap(a))
 
+
+
  -------- Symbol  Table -------- 
 a -> (1, int)
 v -> 32
@@ -713,6 +829,8 @@ ProgramID: --------- 2 ---------
 print(v)
 print(readHeap(a))
 
+
+
  -------- Symbol  Table -------- 
 a -> (1, int)
 v -> 32
@@ -733,6 +851,8 @@ v -> 32
 ProgramID: --------- 2 ---------
  --------Execution Stack-------- 
 print(readHeap(a))
+
+
 
  -------- Symbol  Table -------- 
 a -> (1, int)
@@ -756,6 +876,8 @@ ProgramID: --------- 2 ---------
  --------Execution Stack-------- 
 print(readHeap(a))
 
+
+
  -------- Symbol  Table -------- 
 a -> (1, int)
 v -> 32
@@ -776,6 +898,8 @@ v -> 32
 
 ProgramID: --------- 2 ---------
  --------Execution Stack-------- 
+
+
 
  -------- Symbol  Table -------- 
 a -> (1, int)
