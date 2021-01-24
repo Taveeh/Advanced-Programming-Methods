@@ -2,7 +2,7 @@ package Model.ADTs;
 
 import java.util.Map;
 
-public interface MyILockTable<T> {
+public interface MyILatchTable<T> {
     int allocate(T value);
     void update(int address, T value);
     Map<Integer, T> getContent();

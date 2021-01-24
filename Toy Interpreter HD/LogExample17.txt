@@ -1,0 +1,1200 @@
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+Ref (int) v1;
+Ref (int) v2;
+int x;
+int q;
+new(v1,20);
+new(v2,30);
+newLock (x);
+fork(fork(lock (x);
+writeHeap(v1, readHeap(v1)-1);
+unlock (x));
+lock (x);
+writeHeap(v1, readHeap(v1)*10);
+unlock (x));
+newLock (q);
+fork(fork(lock (q);
+writeHeap(v2, readHeap(v2)+5);
+unlock (q));
+lock (q);
+writeHeap(v2, readHeap(v2)*10);
+unlock (q));
+ ;
+ ;
+ ;
+ ;
+lock (x);
+print(readHeap(v1));
+unlock (x);
+lock (q);
+print(readHeap(v2));
+unlock (q)
+ 
+
+ -------- Symbol  Table -------- 
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+Ref (int) v1
+Ref (int) v2;
+int x;
+int q;
+new(v1,20);
+new(v2,30);
+newLock (x);
+fork(fork(lock (x);
+writeHeap(v1, readHeap(v1)-1);
+unlock (x));
+lock (x);
+writeHeap(v1, readHeap(v1)*10);
+unlock (x));
+newLock (q);
+fork(fork(lock (q);
+writeHeap(v2, readHeap(v2)+5);
+unlock (q));
+lock (q);
+writeHeap(v2, readHeap(v2)*10);
+unlock (q));
+ ;
+ ;
+ ;
+ ;
+lock (x);
+print(readHeap(v1));
+unlock (x);
+lock (q);
+print(readHeap(v2));
+unlock (q)
+ 
+
+ -------- Symbol  Table -------- 
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+Ref (int) v1
+Ref (int) v2;
+int x;
+int q;
+new(v1,20);
+new(v2,30);
+newLock (x);
+fork(fork(lock (x);
+writeHeap(v1, readHeap(v1)-1);
+unlock (x));
+lock (x);
+writeHeap(v1, readHeap(v1)*10);
+unlock (x));
+newLock (q);
+fork(fork(lock (q);
+writeHeap(v2, readHeap(v2)+5);
+unlock (q));
+lock (q);
+writeHeap(v2, readHeap(v2)*10);
+unlock (q));
+ ;
+ ;
+ ;
+ ;
+lock (x);
+print(readHeap(v1));
+unlock (x);
+lock (q);
+print(readHeap(v2));
+unlock (q)
+ 
+
+ -------- Symbol  Table -------- 
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+Ref (int) v2;
+int x;
+int q;
+new(v1,20);
+new(v2,30);
+newLock (x);
+fork(fork(lock (x);
+writeHeap(v1, readHeap(v1)-1);
+unlock (x));
+lock (x);
+writeHeap(v1, readHeap(v1)*10);
+unlock (x));
+newLock (q);
+fork(fork(lock (q);
+writeHeap(v2, readHeap(v2)+5);
+unlock (q));
+lock (q);
+writeHeap(v2, readHeap(v2)*10);
+unlock (q));
+ ;
+ ;
+ ;
+ ;
+lock (x);
+print(readHeap(v1));
+unlock (x);
+lock (q);
+print(readHeap(v2));
+unlock (q)
+ 
+
+ -------- Symbol  Table -------- 
+v1 -> (0, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+Ref (int) v2;
+int x;
+int q;
+new(v1,20);
+new(v2,30);
+newLock (x);
+fork(fork(lock (x);
+writeHeap(v1, readHeap(v1)-1);
+unlock (x));
+lock (x);
+writeHeap(v1, readHeap(v1)*10);
+unlock (x));
+newLock (q);
+fork(fork(lock (q);
+writeHeap(v2, readHeap(v2)+5);
+unlock (q));
+lock (q);
+writeHeap(v2, readHeap(v2)*10);
+unlock (q));
+ ;
+ ;
+ ;
+ ;
+lock (x);
+print(readHeap(v1));
+unlock (x);
+lock (q);
+print(readHeap(v2));
+unlock (q)
+ 
+
+ -------- Symbol  Table -------- 
+v1 -> (0, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+Ref (int) v2
+int x;
+int q;
+new(v1,20);
+new(v2,30);
+newLock (x);
+fork(fork(lock (x);
+writeHeap(v1, readHeap(v1)-1);
+unlock (x));
+lock (x);
+writeHeap(v1, readHeap(v1)*10);
+unlock (x));
+newLock (q);
+fork(fork(lock (q);
+writeHeap(v2, readHeap(v2)+5);
+unlock (q));
+lock (q);
+writeHeap(v2, readHeap(v2)*10);
+unlock (q));
+ ;
+ ;
+ ;
+ ;
+lock (x);
+print(readHeap(v1));
+unlock (x);
+lock (q);
+print(readHeap(v2));
+unlock (q)
+ 
+
+ -------- Symbol  Table -------- 
+v1 -> (0, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+Ref (int) v2
+int x;
+int q;
+new(v1,20);
+new(v2,30);
+newLock (x);
+fork(fork(lock (x);
+writeHeap(v1, readHeap(v1)-1);
+unlock (x));
+lock (x);
+writeHeap(v1, readHeap(v1)*10);
+unlock (x));
+newLock (q);
+fork(fork(lock (q);
+writeHeap(v2, readHeap(v2)+5);
+unlock (q));
+lock (q);
+writeHeap(v2, readHeap(v2)*10);
+unlock (q));
+ ;
+ ;
+ ;
+ ;
+lock (x);
+print(readHeap(v1));
+unlock (x);
+lock (q);
+print(readHeap(v2));
+unlock (q)
+ 
+
+ -------- Symbol  Table -------- 
+v1 -> (0, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+int x;
+int q;
+new(v1,20);
+new(v2,30);
+newLock (x);
+fork(fork(lock (x);
+writeHeap(v1, readHeap(v1)-1);
+unlock (x));
+lock (x);
+writeHeap(v1, readHeap(v1)*10);
+unlock (x));
+newLock (q);
+fork(fork(lock (q);
+writeHeap(v2, readHeap(v2)+5);
+unlock (q));
+lock (q);
+writeHeap(v2, readHeap(v2)*10);
+unlock (q));
+ ;
+ ;
+ ;
+ ;
+lock (x);
+print(readHeap(v1));
+unlock (x);
+lock (q);
+print(readHeap(v2));
+unlock (q)
+ 
+
+ -------- Symbol  Table -------- 
+v1 -> (0, int)
+v2 -> (0, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+int x;
+int q;
+new(v1,20);
+new(v2,30);
+newLock (x);
+fork(fork(lock (x);
+writeHeap(v1, readHeap(v1)-1);
+unlock (x));
+lock (x);
+writeHeap(v1, readHeap(v1)*10);
+unlock (x));
+newLock (q);
+fork(fork(lock (q);
+writeHeap(v2, readHeap(v2)+5);
+unlock (q));
+lock (q);
+writeHeap(v2, readHeap(v2)*10);
+unlock (q));
+ ;
+ ;
+ ;
+ ;
+lock (x);
+print(readHeap(v1));
+unlock (x);
+lock (q);
+print(readHeap(v2));
+unlock (q)
+ 
+
+ -------- Symbol  Table -------- 
+v1 -> (0, int)
+v2 -> (0, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+int x
+int q;
+new(v1,20);
+new(v2,30);
+newLock (x);
+fork(fork(lock (x);
+writeHeap(v1, readHeap(v1)-1);
+unlock (x));
+lock (x);
+writeHeap(v1, readHeap(v1)*10);
+unlock (x));
+newLock (q);
+fork(fork(lock (q);
+writeHeap(v2, readHeap(v2)+5);
+unlock (q));
+lock (q);
+writeHeap(v2, readHeap(v2)*10);
+unlock (q));
+ ;
+ ;
+ ;
+ ;
+lock (x);
+print(readHeap(v1));
+unlock (x);
+lock (q);
+print(readHeap(v2));
+unlock (q)
+ 
+
+ -------- Symbol  Table -------- 
+v1 -> (0, int)
+v2 -> (0, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+int x
+int q;
+new(v1,20);
+new(v2,30);
+newLock (x);
+fork(fork(lock (x);
+writeHeap(v1, readHeap(v1)-1);
+unlock (x));
+lock (x);
+writeHeap(v1, readHeap(v1)*10);
+unlock (x));
+newLock (q);
+fork(fork(lock (q);
+writeHeap(v2, readHeap(v2)+5);
+unlock (q));
+lock (q);
+writeHeap(v2, readHeap(v2)*10);
+unlock (q));
+ ;
+ ;
+ ;
+ ;
+lock (x);
+print(readHeap(v1));
+unlock (x);
+lock (q);
+print(readHeap(v2));
+unlock (q)
+ 
+
+ -------- Symbol  Table -------- 
+v1 -> (0, int)
+v2 -> (0, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+int q;
+new(v1,20);
+new(v2,30);
+newLock (x);
+fork(fork(lock (x);
+writeHeap(v1, readHeap(v1)-1);
+unlock (x));
+lock (x);
+writeHeap(v1, readHeap(v1)*10);
+unlock (x));
+newLock (q);
+fork(fork(lock (q);
+writeHeap(v2, readHeap(v2)+5);
+unlock (q));
+lock (q);
+writeHeap(v2, readHeap(v2)*10);
+unlock (q));
+ ;
+ ;
+ ;
+ ;
+lock (x);
+print(readHeap(v1));
+unlock (x);
+lock (q);
+print(readHeap(v2));
+unlock (q)
+ 
+
+ -------- Symbol  Table -------- 
+x -> 0
+v1 -> (0, int)
+v2 -> (0, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+int q;
+new(v1,20);
+new(v2,30);
+newLock (x);
+fork(fork(lock (x);
+writeHeap(v1, readHeap(v1)-1);
+unlock (x));
+lock (x);
+writeHeap(v1, readHeap(v1)*10);
+unlock (x));
+newLock (q);
+fork(fork(lock (q);
+writeHeap(v2, readHeap(v2)+5);
+unlock (q));
+lock (q);
+writeHeap(v2, readHeap(v2)*10);
+unlock (q));
+ ;
+ ;
+ ;
+ ;
+lock (x);
+print(readHeap(v1));
+unlock (x);
+lock (q);
+print(readHeap(v2));
+unlock (q)
+ 
+
+ -------- Symbol  Table -------- 
+x -> 0
+v1 -> (0, int)
+v2 -> (0, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+int q
+new(v1,20);
+new(v2,30);
+newLock (x);
+fork(fork(lock (x);
+writeHeap(v1, readHeap(v1)-1);
+unlock (x));
+lock (x);
+writeHeap(v1, readHeap(v1)*10);
+unlock (x));
+newLock (q);
+fork(fork(lock (q);
+writeHeap(v2, readHeap(v2)+5);
+unlock (q));
+lock (q);
+writeHeap(v2, readHeap(v2)*10);
+unlock (q));
+ ;
+ ;
+ ;
+ ;
+lock (x);
+print(readHeap(v1));
+unlock (x);
+lock (q);
+print(readHeap(v2));
+unlock (q)
+ 
+
+ -------- Symbol  Table -------- 
+x -> 0
+v1 -> (0, int)
+v2 -> (0, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+int q
+new(v1,20);
+new(v2,30);
+newLock (x);
+fork(fork(lock (x);
+writeHeap(v1, readHeap(v1)-1);
+unlock (x));
+lock (x);
+writeHeap(v1, readHeap(v1)*10);
+unlock (x));
+newLock (q);
+fork(fork(lock (q);
+writeHeap(v2, readHeap(v2)+5);
+unlock (q));
+lock (q);
+writeHeap(v2, readHeap(v2)*10);
+unlock (q));
+ ;
+ ;
+ ;
+ ;
+lock (x);
+print(readHeap(v1));
+unlock (x);
+lock (q);
+print(readHeap(v2));
+unlock (q)
+ 
+
+ -------- Symbol  Table -------- 
+x -> 0
+v1 -> (0, int)
+v2 -> (0, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+new(v1,20);
+new(v2,30);
+newLock (x);
+fork(fork(lock (x);
+writeHeap(v1, readHeap(v1)-1);
+unlock (x));
+lock (x);
+writeHeap(v1, readHeap(v1)*10);
+unlock (x));
+newLock (q);
+fork(fork(lock (q);
+writeHeap(v2, readHeap(v2)+5);
+unlock (q));
+lock (q);
+writeHeap(v2, readHeap(v2)*10);
+unlock (q));
+ ;
+ ;
+ ;
+ ;
+lock (x);
+print(readHeap(v1));
+unlock (x);
+lock (q);
+print(readHeap(v2));
+unlock (q)
+ 
+
+ -------- Symbol  Table -------- 
+q -> 0
+x -> 0
+v1 -> (0, int)
+v2 -> (0, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+new(v1,20);
+new(v2,30);
+newLock (x);
+fork(fork(lock (x);
+writeHeap(v1, readHeap(v1)-1);
+unlock (x));
+lock (x);
+writeHeap(v1, readHeap(v1)*10);
+unlock (x));
+newLock (q);
+fork(fork(lock (q);
+writeHeap(v2, readHeap(v2)+5);
+unlock (q));
+lock (q);
+writeHeap(v2, readHeap(v2)*10);
+unlock (q));
+ ;
+ ;
+ ;
+ ;
+lock (x);
+print(readHeap(v1));
+unlock (x);
+lock (q);
+print(readHeap(v2));
+unlock (q)
+ 
+
+ -------- Symbol  Table -------- 
+q -> 0
+x -> 0
+v1 -> (0, int)
+v2 -> (0, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+new(v1,20)
+new(v2,30);
+newLock (x);
+fork(fork(lock (x);
+writeHeap(v1, readHeap(v1)-1);
+unlock (x));
+lock (x);
+writeHeap(v1, readHeap(v1)*10);
+unlock (x));
+newLock (q);
+fork(fork(lock (q);
+writeHeap(v2, readHeap(v2)+5);
+unlock (q));
+lock (q);
+writeHeap(v2, readHeap(v2)*10);
+unlock (q));
+ ;
+ ;
+ ;
+ ;
+lock (x);
+print(readHeap(v1));
+unlock (x);
+lock (q);
+print(readHeap(v2));
+unlock (q)
+ 
+
+ -------- Symbol  Table -------- 
+q -> 0
+x -> 0
+v1 -> (0, int)
+v2 -> (0, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+new(v1,20)
+new(v2,30);
+newLock (x);
+fork(fork(lock (x);
+writeHeap(v1, readHeap(v1)-1);
+unlock (x));
+lock (x);
+writeHeap(v1, readHeap(v1)*10);
+unlock (x));
+newLock (q);
+fork(fork(lock (q);
+writeHeap(v2, readHeap(v2)+5);
+unlock (q));
+lock (q);
+writeHeap(v2, readHeap(v2)*10);
+unlock (q));
+ ;
+ ;
+ ;
+ ;
+lock (x);
+print(readHeap(v1));
+unlock (x);
+lock (q);
+print(readHeap(v2));
+unlock (q)
+ 
+
+ -------- Symbol  Table -------- 
+q -> 0
+x -> 0
+v1 -> (0, int)
+v2 -> (0, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+new(v2,30);
+newLock (x);
+fork(fork(lock (x);
+writeHeap(v1, readHeap(v1)-1);
+unlock (x));
+lock (x);
+writeHeap(v1, readHeap(v1)*10);
+unlock (x));
+newLock (q);
+fork(fork(lock (q);
+writeHeap(v2, readHeap(v2)+5);
+unlock (q));
+lock (q);
+writeHeap(v2, readHeap(v2)*10);
+unlock (q));
+ ;
+ ;
+ ;
+ ;
+lock (x);
+print(readHeap(v1));
+unlock (x);
+lock (q);
+print(readHeap(v2));
+unlock (q)
+ 
+
+ -------- Symbol  Table -------- 
+q -> 0
+x -> 0
+v1 -> (1, int)
+v2 -> (0, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+new(v2,30);
+newLock (x);
+fork(fork(lock (x);
+writeHeap(v1, readHeap(v1)-1);
+unlock (x));
+lock (x);
+writeHeap(v1, readHeap(v1)*10);
+unlock (x));
+newLock (q);
+fork(fork(lock (q);
+writeHeap(v2, readHeap(v2)+5);
+unlock (q));
+lock (q);
+writeHeap(v2, readHeap(v2)*10);
+unlock (q));
+ ;
+ ;
+ ;
+ ;
+lock (x);
+print(readHeap(v1));
+unlock (x);
+lock (q);
+print(readHeap(v2));
+unlock (q)
+ 
+
+ -------- Symbol  Table -------- 
+q -> 0
+x -> 0
+v1 -> (1, int)
+v2 -> (0, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+new(v2,30)
+newLock (x);
+fork(fork(lock (x);
+writeHeap(v1, readHeap(v1)-1);
+unlock (x));
+lock (x);
+writeHeap(v1, readHeap(v1)*10);
+unlock (x));
+newLock (q);
+fork(fork(lock (q);
+writeHeap(v2, readHeap(v2)+5);
+unlock (q));
+lock (q);
+writeHeap(v2, readHeap(v2)*10);
+unlock (q));
+ ;
+ ;
+ ;
+ ;
+lock (x);
+print(readHeap(v1));
+unlock (x);
+lock (q);
+print(readHeap(v2));
+unlock (q)
+ 
+
+ -------- Symbol  Table -------- 
+q -> 0
+x -> 0
+v1 -> (1, int)
+v2 -> (0, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+new(v2,30)
+newLock (x);
+fork(fork(lock (x);
+writeHeap(v1, readHeap(v1)-1);
+unlock (x));
+lock (x);
+writeHeap(v1, readHeap(v1)*10);
+unlock (x));
+newLock (q);
+fork(fork(lock (q);
+writeHeap(v2, readHeap(v2)+5);
+unlock (q));
+lock (q);
+writeHeap(v2, readHeap(v2)*10);
+unlock (q));
+ ;
+ ;
+ ;
+ ;
+lock (x);
+print(readHeap(v1));
+unlock (x);
+lock (q);
+print(readHeap(v2));
+unlock (q)
+ 
+
+ -------- Symbol  Table -------- 
+q -> 0
+x -> 0
+v1 -> (1, int)
+v2 -> (0, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+newLock (x);
+fork(fork(lock (x);
+writeHeap(v1, readHeap(v1)-1);
+unlock (x));
+lock (x);
+writeHeap(v1, readHeap(v1)*10);
+unlock (x));
+newLock (q);
+fork(fork(lock (q);
+writeHeap(v2, readHeap(v2)+5);
+unlock (q));
+lock (q);
+writeHeap(v2, readHeap(v2)*10);
+unlock (q));
+ ;
+ ;
+ ;
+ ;
+lock (x);
+print(readHeap(v1));
+unlock (x);
+lock (q);
+print(readHeap(v2));
+unlock (q)
+ 
+
+ -------- Symbol  Table -------- 
+q -> 0
+x -> 0
+v1 -> (1, int)
+v2 -> (2, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+2 -> 30
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------------------------------- 
+
+
+

@@ -211,6 +211,19 @@ public class Controller {
         return repository.getProgramList().get(0).getHeapTable();
     }
 
+    public MyILatchTable<Integer> getLatchTable() {
+        if (repository.getProgramList().size() == 0) {
+            return new MyLatchTable<>();
+        }
+        return repository.getProgramList().get(0).getLatchTable();
+    }
+    public MyILockTable<Integer> getLockTable() {
+        if (repository.getProgramList().size() == 0) {
+            return new MyLockTable<>();
+        }
+        return repository.getProgramList().get(0).getLockTable();
+    }
+
     public MyIDictionary<StringValue, BufferedReader> getFileTable() {
         if (repository.getProgramList().size() == 0) {
             return new MyDictionary<>();

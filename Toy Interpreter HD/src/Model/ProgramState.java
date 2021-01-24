@@ -18,7 +18,16 @@ public class ProgramState {
     MyIDictionary<StringValue, BufferedReader> fileTable;
     MyIHeap<Value> heapTable;
     IStatement originalProgram;
-    MyILockTable<Value> lockTable;
+    MyILockTable<Integer> lockTable;
+    MyILatchTable<Integer> latchTable;
+
+    public MyILatchTable<Integer> getLatchTable() {
+        return latchTable;
+    }
+
+    public void setLatchTable(MyILatchTable<Integer> latchTable) {
+        this.latchTable = latchTable;
+    }
 
     public static Integer lastID = 1;
     private Integer id;
@@ -44,7 +53,7 @@ public class ProgramState {
     }
 
 
-    public ProgramState(MyIStack<IStatement> executionStack, MyIDictionary<String, Value> symbolTable, MyIList<Value> outputConsole, MyIDictionary<StringValue, BufferedReader> fileTable, MyIHeap<Value> heapTable, MyILockTable<Value> lockTable, IStatement originalProgram) {
+    public ProgramState(MyIStack<IStatement> executionStack, MyIDictionary<String, Value> symbolTable, MyIList<Value> outputConsole, MyIDictionary<StringValue, BufferedReader> fileTable, MyIHeap<Value> heapTable, MyILockTable<Integer> lockTable, MyILatchTable<Integer> latchTable, IStatement originalProgram) {
         this.executionStack = executionStack;
         this.symbolTable = symbolTable;
         this.outputConsole = outputConsole;
@@ -52,19 +61,21 @@ public class ProgramState {
         this.heapTable = heapTable;
         this.originalProgram = originalProgram;
         this.lockTable = lockTable;
+        this.latchTable = latchTable;
         id = 1;
         if (originalProgram != null) {
             executionStack.push(originalProgram);
         }
     }
 
-    public ProgramState(MyIStack<IStatement> executionStack, MyIDictionary<String, Value> symbolTable, MyIList<Value> outputConsole, MyIDictionary<StringValue, BufferedReader> fileTable, MyIHeap<Value> heapTable, MyILockTable<Value> lockTable) {
+    public ProgramState(MyIStack<IStatement> executionStack, MyIDictionary<String, Value> symbolTable, MyIList<Value> outputConsole, MyIDictionary<StringValue, BufferedReader> fileTable, MyIHeap<Value> heapTable, MyILockTable<Integer> lockTable, MyILatchTable<Integer> latchTable) {
         this.executionStack = executionStack;
         this.symbolTable = symbolTable;
         this.outputConsole = outputConsole;
         this.fileTable = fileTable;
         this.heapTable = heapTable;
         this.lockTable = lockTable;
+        this.latchTable = latchTable;
         id = 1;
     }
 
@@ -101,11 +112,11 @@ public class ProgramState {
         this.fileTable = fileTable;
     }
 
-    public MyILockTable<Value> getLockTable() {
+    public MyILockTable<Integer> getLockTable() {
         return lockTable;
     }
 
-    public void setLockTable(MyILockTable<Value> lockTable) {
+    public void setLockTable(MyILockTable<Integer> lockTable) {
         this.lockTable = lockTable;
     }
 
@@ -132,6 +143,10 @@ public class ProgramState {
                 fileTable.toString() + '\n' +
                 " --------  Heap  Table  -------- \n" +
                 heapTable.toString() + '\n' +
+                " --------  Lock  Table  -------- \n" +
+                lockTable.toString() + '\n' +
+                " --------  Latch  Table  -------- \n" +
+                latchTable.toString() + '\n' +
                 " ------------------------------- \n\n\n";
     }
 }

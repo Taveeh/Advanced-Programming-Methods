@@ -11,10 +11,10 @@ import Model.Types.Type;
 import Model.Values.IntegerValue;
 import Model.Values.Value;
 
-public class LockStatement implements IStatement {
+public class UnlockStatement implements IStatement {
     String id;
 
-    public LockStatement(String id) {
+    public UnlockStatement(String id) {
         this.id = id;
     }
 
@@ -31,10 +31,8 @@ public class LockStatement implements IStatement {
                 if (!lockTable.exists(foundIndex.getValue())) {
                     throw new InterpreterException("Lock does not exist");
                 } else {
-                    if (lockTable.get(foundIndex.getValue()) == -1) {
-                        lockTable.update(foundIndex.getValue(), state.getId());
-                    } else {
-                        stack.push(this);
+                    if (lockTable.get(foundIndex.getValue()).equals(state.getId())) {
+                        lockTable.update(foundIndex.getValue(), -1);
                     }
                 }
             } else {
@@ -43,15 +41,15 @@ public class LockStatement implements IStatement {
         } else {
             throw new InterpreterException("Variable not defined");
         }
-        state.setLockTable(lockTable);
-        state.setSymbolTable(symbolTable);
         state.setExecutionStack(stack);
+        state.setSymbolTable(symbolTable);
+        state.setLockTable(lockTable);
         return null;
     }
 
     @Override
     public IStatement createCopy() {
-        return new LockStatement(id);
+        return new UnlockStatement(id);
     }
 
     @Override
@@ -65,6 +63,6 @@ public class LockStatement implements IStatement {
 
     @Override
     public String toString() {
-        return "lock (" + id + ")";
+        return "unlock (" + id + ")";
     }
 }

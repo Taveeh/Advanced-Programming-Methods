@@ -15,10 +15,12 @@
     </padding>
 
     <columnConstraints>
-        <ColumnConstraints minWidth="80"/>
-        <ColumnConstraints minWidth="80"/>
-        <ColumnConstraints minWidth="80"/>
-        <ColumnConstraints minWidth="80"/>
+        <ColumnConstraints minWidth="80" />
+        <ColumnConstraints minWidth="80" />
+        <ColumnConstraints minWidth="80" />
+        <ColumnConstraints minWidth="80" />
+        <ColumnConstraints minWidth="80" />
+        <ColumnConstraints minWidth="80" />
     </columnConstraints>
 
     <rowConstraints>
@@ -76,6 +78,22 @@
 
     <Button text="Run one step" GridPane.columnSpan="2" GridPane.rowIndex="5" GridPane.columnIndex="1"
             onAction="#runOneStep" GridPane.halignment="CENTER"/>
+
+    <TextField text="Lock Table" editable="false" GridPane.columnIndex="4" GridPane.rowIndex="1" GridPane.columnSpan="2" />
+    <TableView fx:id="lockTableView" accessibleRole="IMAGE_VIEW" GridPane.columnIndex="4" GridPane.rowIndex="2" GridPane.columnSpan="2" >
+        <columns>
+            <TableColumn fx:id="lockAddressTableColumn" text="Location"/>
+            <TableColumn fx:id="lockIdentifierTableColumn" text="Value"/>
+        </columns>
+    </TableView>
+
+    <TextField text="Latch Table" editable="false" GridPane.columnIndex="4" GridPane.rowIndex="3" GridPane.columnSpan="2" />
+    <TableView fx:id="latchTableView" accessibleRole="IMAGE_VIEW" GridPane.columnIndex="4" GridPane.rowIndex="4" GridPane.columnSpan="2" >
+        <columns>
+            <TableColumn fx:id="latchAddressTableColumn" text="Location"/>
+            <TableColumn fx:id="latchIdentifierTableColumn" text="Value"/>
+        </columns>
+    </TableView>
 
 
 </GridPane>

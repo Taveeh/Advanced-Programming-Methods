@@ -9,6 +9,7 @@ import Model.Statement.NopStatement;
 import Model.Values.Value;
 import Repository.IRepository;
 import Repository.Repository;
+import com.sun.jdi.connect.spi.TransportService;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 
 import javafx.beans.value.ObservableValue;
@@ -54,6 +55,23 @@ public class MainProgramController {
     @FXML
     private TextField numberOfStatesTextField;
 
+    @FXML
+    private TableView<Pair<Integer, Integer>> lockTableView;
+
+    @FXML
+    private TableColumn<Pair<Integer, Integer>, Integer> lockAddressTableColumn;
+
+    @FXML
+    private TableColumn<Pair<Integer, Integer>, Integer> lockIdentifierTableColumn;
+
+    @FXML
+    private TableView<Pair<Integer, Integer>> latchTableView;
+
+    @FXML
+    private TableColumn<Pair<Integer, Integer>, Integer> latchAddressTableColumn;
+
+    @FXML
+    private TableColumn<Pair<Integer, Integer>, Integer> latchIdentifierTableColumn;
 
     private Controller controller;
     List<ProgramState> programStateList;
@@ -62,7 +80,7 @@ public class MainProgramController {
         String file = "LogExample" + index + ".txt";
         MyIStack<IStatement> stack = new MyStack();
         stack.push(new NopStatement());
-        ProgramState state = new ProgramState(stack, new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap<>(), new MyLockTable<>(), statement);
+        ProgramState state = new ProgramState(stack, new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap<>(), new MyLockTable<>(), new MyLatchTable<>(), statement);
         IRepository repository = new Repository(file);
         repository.addState(state);
         controller = new Controller(repository);
@@ -92,6 +110,12 @@ public class MainProgramController {
         }
     }
 
+    private void populateLockTable() {
+        List<Pair<Integer, Integer>> list = new LinkedList<>();
+        controller.getLockTable().getContent().forEach((key, value) -> list.add(new Pair<>(key, value)));
+        lockTableView.setItems(FXCollections.observableList(list));
+    }
+
     private void setAllFields() {
 
         populateOutputList();
@@ -99,11 +123,17 @@ public class MainProgramController {
         populateSymbolTable();
         populateFileList();
         populateExecutionList();
+        populateLockTable();
+        populateLatchTable();
         setNumberOfStates();
         populateProgramList();
-
     }
 
+    private void populateLatchTable() {
+        List<Pair<Integer, Integer>> list = new LinkedList<>();
+        controller.getLatchTable().getContent().forEach((key, value) -> list.add(new Pair<>(key, value)));
+        latchTableView.setItems(FXCollections.observableList(list));
+    }
     private void populateHeapTable() {
         List<Pair<Integer, Value>> list = new LinkedList<>();
         controller.getHeapTable().getContent().forEach((key, value) -> list.add(new Pair<>(key, value)));
@@ -178,10 +208,16 @@ public class MainProgramController {
     private void initialize() {
         heapTableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
         symbolTableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+        lockTableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+        latchTableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
         addressTableColumn.setCellValueFactory(new PairKeyFactory<>());
         valueTableColumn.setCellValueFactory(new PairValueFactory<>());
         variableNameTableColumn.setCellValueFactory(new PairKeyFactory<>());
         variableValueTableColumn.setCellValueFactory(new PairValueFactory<>());
+        lockAddressTableColumn.setCellValueFactory(new PairKeyFactory<>());
+        lockIdentifierTableColumn.setCellValueFactory(new PairValueFactory<>());
+        latchAddressTableColumn.setCellValueFactory(new PairKeyFactory<>());
+        latchIdentifierTableColumn.setCellValueFactory(new PairValueFactory<>());
         programStatesListView.getSelectionModel().selectedItemProperty().addListener((observableValue, s, t1) -> {
             try {
                 currentState = Integer.parseInt(t1);

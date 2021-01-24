@@ -1,0 +1,1353 @@
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+int v; v = 0; repeat { fork(print(v); v = v-1); v = v+1 } until (v == 3); print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+int v
+v = 0; repeat { fork(print(v); v = v-1); v = v+1 } until (v == 3); print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+int v
+v = 0; repeat { fork(print(v); v = v-1); v = v+1 } until (v == 3); print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+v = 0; repeat { fork(print(v); v = v-1); v = v+1 } until (v == 3); print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 0
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+v = 0; repeat { fork(print(v); v = v-1); v = v+1 } until (v == 3); print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 0
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+v = 0
+repeat { fork(print(v); v = v-1); v = v+1 } until (v == 3); print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 0
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+v = 0
+repeat { fork(print(v); v = v-1); v = v+1 } until (v == 3); print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 0
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+repeat { fork(print(v); v = v-1); v = v+1 } until (v == 3); print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 0
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+repeat { fork(print(v); v = v-1); v = v+1 } until (v == 3); print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 0
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+repeat { fork(print(v); v = v-1); v = v+1 } until (v == 3)
+print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 0
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+repeat { fork(print(v); v = v-1); v = v+1 } until (v == 3)
+print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 0
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+fork(print(v); v = v-1); v = v+1; while(not v == 3) { fork(print(v); v = v-1); v = v+1}
+print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 0
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+fork(print(v); v = v-1); v = v+1; while(not v == 3) { fork(print(v); v = v-1); v = v+1}
+print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 0
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+fork(print(v); v = v-1); v = v+1
+while(not v == 3) { fork(print(v); v = v-1); v = v+1}
+print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 0
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+fork(print(v); v = v-1); v = v+1
+while(not v == 3) { fork(print(v); v = v-1); v = v+1}
+print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 0
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+fork(print(v); v = v-1)
+v = v+1
+while(not v == 3) { fork(print(v); v = v-1); v = v+1}
+print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 0
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+fork(print(v); v = v-1)
+v = v+1
+while(not v == 3) { fork(print(v); v = v-1); v = v+1}
+print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 0
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+v = v+1
+while(not v == 3) { fork(print(v); v = v-1); v = v+1}
+print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 0
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 2 ---------
+ --------Execution Stack-------- 
+print(v); v = v-1
+
+
+
+ -------- Symbol  Table -------- 
+v -> 0
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+v = v+1
+while(not v == 3) { fork(print(v); v = v-1); v = v+1}
+print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 0
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 2 ---------
+ --------Execution Stack-------- 
+print(v); v = v-1
+
+
+
+ -------- Symbol  Table -------- 
+v -> 0
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+while(not v == 3) { fork(print(v); v = v-1); v = v+1}
+print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 1
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 2 ---------
+ --------Execution Stack-------- 
+print(v)
+v = v-1
+
+
+
+ -------- Symbol  Table -------- 
+v -> 0
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+while(not v == 3) { fork(print(v); v = v-1); v = v+1}
+print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 1
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 2 ---------
+ --------Execution Stack-------- 
+print(v)
+v = v-1
+
+
+
+ -------- Symbol  Table -------- 
+v -> 0
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+fork(print(v); v = v-1); v = v+1
+while(not v == 3) { fork(print(v); v = v-1); v = v+1}
+print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 1
+
+ -------- Output Console -------- 
+0
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 2 ---------
+ --------Execution Stack-------- 
+v = v-1
+
+
+
+ -------- Symbol  Table -------- 
+v -> 0
+
+ -------- Output Console -------- 
+0
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+fork(print(v); v = v-1); v = v+1
+while(not v == 3) { fork(print(v); v = v-1); v = v+1}
+print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 1
+
+ -------- Output Console -------- 
+0
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 2 ---------
+ --------Execution Stack-------- 
+v = v-1
+
+
+
+ -------- Symbol  Table -------- 
+v -> 0
+
+ -------- Output Console -------- 
+0
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+fork(print(v); v = v-1)
+v = v+1
+while(not v == 3) { fork(print(v); v = v-1); v = v+1}
+print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 1
+
+ -------- Output Console -------- 
+0
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 2 ---------
+ --------Execution Stack-------- 
+
+
+
+ -------- Symbol  Table -------- 
+v -> -1
+
+ -------- Output Console -------- 
+0
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+fork(print(v); v = v-1)
+v = v+1
+while(not v == 3) { fork(print(v); v = v-1); v = v+1}
+print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 1
+
+ -------- Output Console -------- 
+0
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 2 ---------
+ --------Execution Stack-------- 
+
+
+
+ -------- Symbol  Table -------- 
+v -> -1
+
+ -------- Output Console -------- 
+0
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+v = v+1
+while(not v == 3) { fork(print(v); v = v-1); v = v+1}
+print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 1
+
+ -------- Output Console -------- 
+0
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 2 ---------
+ --------Execution Stack-------- 
+
+ -------- Symbol  Table -------- 
+v -> -1
+
+ -------- Output Console -------- 
+0
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 3 ---------
+ --------Execution Stack-------- 
+print(v); v = v-1
+
+
+
+ -------- Symbol  Table -------- 
+v -> 1
+
+ -------- Output Console -------- 
+0
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+v = v+1
+while(not v == 3) { fork(print(v); v = v-1); v = v+1}
+print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 1
+
+ -------- Output Console -------- 
+0
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 3 ---------
+ --------Execution Stack-------- 
+print(v); v = v-1
+
+
+
+ -------- Symbol  Table -------- 
+v -> 1
+
+ -------- Output Console -------- 
+0
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+while(not v == 3) { fork(print(v); v = v-1); v = v+1}
+print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 2
+
+ -------- Output Console -------- 
+0
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 3 ---------
+ --------Execution Stack-------- 
+print(v)
+v = v-1
+
+
+
+ -------- Symbol  Table -------- 
+v -> 1
+
+ -------- Output Console -------- 
+0
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+while(not v == 3) { fork(print(v); v = v-1); v = v+1}
+print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 2
+
+ -------- Output Console -------- 
+0
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 3 ---------
+ --------Execution Stack-------- 
+print(v)
+v = v-1
+
+
+
+ -------- Symbol  Table -------- 
+v -> 1
+
+ -------- Output Console -------- 
+0
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+fork(print(v); v = v-1); v = v+1
+while(not v == 3) { fork(print(v); v = v-1); v = v+1}
+print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 2
+
+ -------- Output Console -------- 
+0
+1
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 3 ---------
+ --------Execution Stack-------- 
+v = v-1
+
+
+
+ -------- Symbol  Table -------- 
+v -> 1
+
+ -------- Output Console -------- 
+0
+1
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+fork(print(v); v = v-1); v = v+1
+while(not v == 3) { fork(print(v); v = v-1); v = v+1}
+print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 2
+
+ -------- Output Console -------- 
+0
+1
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 3 ---------
+ --------Execution Stack-------- 
+v = v-1
+
+
+
+ -------- Symbol  Table -------- 
+v -> 1
+
+ -------- Output Console -------- 
+0
+1
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+fork(print(v); v = v-1)
+v = v+1
+while(not v == 3) { fork(print(v); v = v-1); v = v+1}
+print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 2
+
+ -------- Output Console -------- 
+0
+1
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 3 ---------
+ --------Execution Stack-------- 
+
+
+
+ -------- Symbol  Table -------- 
+v -> 0
+
+ -------- Output Console -------- 
+0
+1
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+fork(print(v); v = v-1)
+v = v+1
+while(not v == 3) { fork(print(v); v = v-1); v = v+1}
+print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 2
+
+ -------- Output Console -------- 
+0
+1
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 3 ---------
+ --------Execution Stack-------- 
+
+
+
+ -------- Symbol  Table -------- 
+v -> 0
+
+ -------- Output Console -------- 
+0
+1
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+v = v+1
+while(not v == 3) { fork(print(v); v = v-1); v = v+1}
+print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 2
+
+ -------- Output Console -------- 
+0
+1
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 3 ---------
+ --------Execution Stack-------- 
+
+ -------- Symbol  Table -------- 
+v -> 0
+
+ -------- Output Console -------- 
+0
+1
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 4 ---------
+ --------Execution Stack-------- 
+print(v); v = v-1
+
+
+
+ -------- Symbol  Table -------- 
+v -> 2
+
+ -------- Output Console -------- 
+0
+1
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+v = v+1
+while(not v == 3) { fork(print(v); v = v-1); v = v+1}
+print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 2
+
+ -------- Output Console -------- 
+0
+1
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 4 ---------
+ --------Execution Stack-------- 
+print(v); v = v-1
+
+
+
+ -------- Symbol  Table -------- 
+v -> 2
+
+ -------- Output Console -------- 
+0
+1
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+while(not v == 3) { fork(print(v); v = v-1); v = v+1}
+print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 3
+
+ -------- Output Console -------- 
+0
+1
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 4 ---------
+ --------Execution Stack-------- 
+print(v)
+v = v-1
+
+
+
+ -------- Symbol  Table -------- 
+v -> 2
+
+ -------- Output Console -------- 
+0
+1
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+while(not v == 3) { fork(print(v); v = v-1); v = v+1}
+print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 3
+
+ -------- Output Console -------- 
+0
+1
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 4 ---------
+ --------Execution Stack-------- 
+print(v)
+v = v-1
+
+
+
+ -------- Symbol  Table -------- 
+v -> 2
+
+ -------- Output Console -------- 
+0
+1
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 3
+
+ -------- Output Console -------- 
+0
+1
+2
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 4 ---------
+ --------Execution Stack-------- 
+v = v-1
+
+
+
+ -------- Symbol  Table -------- 
+v -> 2
+
+ -------- Output Console -------- 
+0
+1
+2
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+print(v*10)
+
+
+
+ -------- Symbol  Table -------- 
+v -> 3
+
+ -------- Output Console -------- 
+0
+1
+2
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 4 ---------
+ --------Execution Stack-------- 
+v = v-1
+
+
+
+ -------- Symbol  Table -------- 
+v -> 2
+
+ -------- Output Console -------- 
+0
+1
+2
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+
+
+
+ -------- Symbol  Table -------- 
+v -> 3
+
+ -------- Output Console -------- 
+0
+1
+2
+30
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 4 ---------
+ --------Execution Stack-------- 
+
+
+
+ -------- Symbol  Table -------- 
+v -> 1
+
+ -------- Output Console -------- 
+0
+1
+2
+30
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ ------------------------------- 
+
+
+

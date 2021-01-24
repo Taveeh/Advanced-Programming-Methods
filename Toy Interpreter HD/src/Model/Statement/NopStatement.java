@@ -22,7 +22,7 @@ public class NopStatement implements IStatement{
 
     @Override
     public String toString() {
-        return "\n";
+        return " ";
     }
 
     @Override

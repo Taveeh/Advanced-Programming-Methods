@@ -3,48 +3,45 @@ package Model.Statement;
 import Exceptions.InterpreterException;
 import Exceptions.TypeException;
 import Model.ADTs.MyIDictionary;
-import Model.ADTs.MyILockTable;
-import Model.ADTs.MyIStack;
 import Model.ProgramState;
 import Model.Types.IntegerType;
 import Model.Types.Type;
 import Model.Values.IntegerValue;
 import Model.Values.Value;
 
-public class NewLockStatement implements IStatement {
+public class AwaitStatement implements IStatement {
     String id;
 
-    public NewLockStatement(String id) {
+    public AwaitStatement(String id) {
         this.id = id;
     }
 
     @Override
     public ProgramState execute(ProgramState state) throws InterpreterException {
-        MyIStack<IStatement> stack = state.getExecutionStack();
-        MyIDictionary<String, Value> symbolTable = state.getSymbolTable();
-        MyILockTable<Integer> lockTable = state.getLockTable();
 
-        if (symbolTable.isVariableDefined(id)) {
-            Value variableValue = symbolTable.lookup(id);
-            if (variableValue.getType().equals(new IntegerType())) {
-                int addr = lockTable.allocate(-1);
-                symbolTable.update(id, new IntegerValue(addr));
+        if (state.getSymbolTable().isVariableDefined(id)) {
+            Value foundIndex = state.getSymbolTable().lookup(id);
+            if (foundIndex.getType().equals(new IntegerType())) {
+                int found = ((IntegerValue) foundIndex).getValue();
+                if (state.getLatchTable().exists(found)) {
+                    if (state.getLatchTable().get(found) != 0) {
+                        state.getExecutionStack().push(this);
+                    }
+                } else {
+                    throw new InterpreterException("Latch does not exist");
+                }
             } else {
                 throw new InterpreterException("Variable not of type int");
             }
         } else {
-            throw new InterpreterException("Variable is not defined");
+            throw new InterpreterException("Variable not defined");
         }
-
-        state.setExecutionStack(stack);
-        state.setSymbolTable(symbolTable);
-        state.setLockTable(lockTable);
         return null;
     }
 
     @Override
     public IStatement createCopy() {
-        return new NewLockStatement(id);
+        return new AwaitStatement(id);
     }
 
     @Override
@@ -58,6 +55,6 @@ public class NewLockStatement implements IStatement {
 
     @Override
     public String toString() {
-        return "newLock (" + id + ")";
+        return "await (" + id + ")";
     }
 }

@@ -32,7 +32,6 @@ public class ChooseProgramController {
     }
 
     public void addStatement(IStatement statement) {
-//        statements.add(new CompoundStatement(statement, new NopStatement()));
         statements.add(statement);
         programStateListView.setItems(getProgramStatesList());
     }

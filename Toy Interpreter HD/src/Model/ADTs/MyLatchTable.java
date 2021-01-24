@@ -4,54 +4,53 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
-
-public class MyLockTable<T> implements MyILockTable<T> {
+public class MyLatchTable<T> implements MyILatchTable<T> {
     AtomicInteger freeValue;
-    Map<Integer, T> lockTable;
+    Map<Integer, T> latchTable;
 
-    public MyLockTable() {
-        this.lockTable = new HashMap<>();
+    public MyLatchTable() {
+        this.latchTable = new HashMap<>();
         freeValue = new AtomicInteger(0);
     }
 
     @Override
     public synchronized int allocate(T value) {
-        lockTable.put(freeValue.incrementAndGet(), value);
+        latchTable.put(freeValue.incrementAndGet(), value);
         return freeValue.get();
     }
 
     @Override
     public synchronized void update(int address, T value) {
-        lockTable.put(address, value);
+        latchTable.put(address, value);
     }
 
     @Override
     public synchronized Map<Integer, T> getContent() {
-        return lockTable;
+        return latchTable;
     }
 
     @Override
     public synchronized boolean exists(int address) {
-        return lockTable.containsKey(address);
+        return latchTable.containsKey(address);
     }
 
     @Override
     public synchronized void setContent(Map<Integer, T> map) {
-        lockTable = map;
+        latchTable = map;
     }
 
     @Override
     public synchronized T get(int addr) {
-        return lockTable.get(addr);
+        return latchTable.get(addr);
     }
 
 
     @Override
     public String toString() {
         StringBuilder s = new StringBuilder();
-        for(var elem: lockTable.keySet()) {
+        for(var elem: latchTable.keySet()) {
             if (elem != null)
-                s.append(elem.toString()).append(" -> ").append(lockTable.get(elem).toString()).append('\n');
+                s.append(elem.toString()).append(" -> ").append(latchTable.get(elem).toString()).append('\n');
         }
         return s.toString();
     }
