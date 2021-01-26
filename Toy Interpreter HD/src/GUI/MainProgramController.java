@@ -9,7 +9,6 @@ import Model.Statement.NopStatement;
 import Model.Values.Value;
 import Repository.IRepository;
 import Repository.Repository;
-import com.sun.jdi.connect.spi.TransportService;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 
 import javafx.beans.value.ObservableValue;
@@ -73,6 +72,41 @@ public class MainProgramController {
     @FXML
     private TableColumn<Pair<Integer, Integer>, Integer> latchIdentifierTableColumn;
 
+    @FXML
+    private TableView<Pair<Integer, Pair<Integer, String>>> countSemTableView;
+
+    @FXML
+    private TableColumn<Pair<Integer, Pair<Integer, String>>, Integer> countAddressTableColumn;
+
+    @FXML
+    private TableColumn<Pair<Integer, Pair<Integer, String>>, Integer> countValueTableColumn;
+
+    @FXML
+    private TableColumn<Pair<Integer, Pair<Integer, String>>, String> countListTableColumn;
+
+    @FXML
+    private TableView<Pair<Pair<Integer, Integer>, Pair<String, Integer>>> toySemTableView;
+    @FXML
+    private TableColumn<Pair<Pair<Integer, Integer>, Pair<String, Integer>>, Integer> toyAddressTableColumn;
+    @FXML
+    private TableColumn<Pair<Pair<Integer, Integer>, Pair<String, Integer>>, Integer> toyValue1TableColumn;
+    @FXML
+    private TableColumn<Pair<Pair<Integer, Integer>, Pair<String, Integer>>, String> toyListTableColumn;
+    @FXML
+    private TableColumn<Pair<Pair<Integer, Integer>, Pair<String, Integer>>, Integer> toyValue2TableColumn;
+
+    @FXML
+    private TableView<Pair<Integer, Pair<Integer, String>>> barrierTableView;
+
+    @FXML
+    private TableColumn<Pair<Integer, Pair<Integer, String>>, Integer> barrierAddressTableColumn;
+
+    @FXML
+    private TableColumn<Pair<Integer, Pair<Integer, String>>, Integer> barrierValueTableColumn;
+
+    @FXML
+    private TableColumn<Pair<Integer, Pair<Integer, String>>, String> barrierListTableColumn;
+
     private Controller controller;
     List<ProgramState> programStateList;
 
@@ -80,7 +114,18 @@ public class MainProgramController {
         String file = "LogExample" + index + ".txt";
         MyIStack<IStatement> stack = new MyStack();
         stack.push(new NopStatement());
-        ProgramState state = new ProgramState(stack, new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap<>(), new MyLockTable<>(), new MyLatchTable<>(), statement);
+        ProgramState state = new ProgramState(
+                stack,
+                new MyDictionary<>(),
+                new MyList<>(),
+                new MyDictionary<>(),
+                new MyHeap<>(),
+                new MyLockTable<>(),
+                new MyLatchTable<>(),
+                new MyToySemaphoreTable<>(),
+                new MyCountSemaphore<>(),
+                new MyBarrierTable<>(),
+                statement);
         IRepository repository = new Repository(file);
         repository.addState(state);
         controller = new Controller(repository);
@@ -110,6 +155,23 @@ public class MainProgramController {
         }
     }
 
+    private void populateBarrierTable() {
+        List<Pair<Integer, Pair<Integer, String>>> list = new ArrayList<>();
+        System.out.println(controller.getBarrierTable());
+        controller.getBarrierTable().getContent().forEach((key, value) -> list.add(new Pair<>(key, new Pair<>(value.getKey(), value.getValue().toString()))));
+        barrierTableView.setItems(FXCollections.observableList(list));
+    }
+    private void populateCountSemaphoreTable() {
+        List<Pair<Integer, Pair<Integer, String>>> countSemList = new ArrayList<>();
+        controller.getCountSemaphoreTable().getContent().forEach((key, value) -> countSemList.add(new Pair<>(key, new Pair<>(value.getKey(), value.getValue().toString()))));
+        countSemTableView.setItems(FXCollections.observableList(countSemList));
+    }
+
+    private void populateToySemaphoreTable() {
+        List<Pair<Pair<Integer, Integer>, Pair<String, Integer>>> list = new ArrayList<>();
+        controller.getToySemaphoreTable().getContent().forEach((key, value) -> list.add(new Pair<>(new Pair<>(key, value.first), new Pair<>(value.second.toString(), value.third))));
+        toySemTableView.setItems(FXCollections.observableList(list));
+    }
     private void populateLockTable() {
         List<Pair<Integer, Integer>> list = new LinkedList<>();
         controller.getLockTable().getContent().forEach((key, value) -> list.add(new Pair<>(key, value)));
@@ -121,10 +183,13 @@ public class MainProgramController {
         populateOutputList();
         populateHeapTable();
         populateSymbolTable();
+        populateBarrierTable();
         populateFileList();
+        populateToySemaphoreTable();
         populateExecutionList();
         populateLockTable();
         populateLatchTable();
+        populateCountSemaphoreTable();
         setNumberOfStates();
         populateProgramList();
     }
@@ -210,6 +275,23 @@ public class MainProgramController {
         symbolTableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
         lockTableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
         latchTableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+        countSemTableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+        toySemTableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+        barrierTableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+        countAddressTableColumn.setCellValueFactory(new PairKeyFactory<>());
+        countValueTableColumn.setCellValueFactory(new TripleValueKeyFactory<>());
+        countListTableColumn.setCellValueFactory(new TripleValueValueFactory<>());
+
+        barrierAddressTableColumn.setCellValueFactory(new PairKeyFactory<>());
+        barrierValueTableColumn.setCellValueFactory(new TripleValueKeyFactory<>());
+        barrierListTableColumn.setCellValueFactory(new TripleValueValueFactory<>());
+
+        toyAddressTableColumn.setCellValueFactory(new DoublePairKeyKeyFactory<>());
+        toyValue1TableColumn.setCellValueFactory(new DoublePairKeyValueFactory<>());
+        toyListTableColumn.setCellValueFactory(new DoublePairValueKeyFactory<>());
+        toyValue2TableColumn.setCellValueFactory(new DoublePairValueValueFactory<>());
+
         addressTableColumn.setCellValueFactory(new PairKeyFactory<>());
         valueTableColumn.setCellValueFactory(new PairValueFactory<>());
         variableNameTableColumn.setCellValueFactory(new PairKeyFactory<>());
@@ -252,4 +334,54 @@ class PairValueFactory<T, E> implements Callback<TableColumn.CellDataFeatures<Pa
     }
 }
 
+class TripleValueValueFactory<T, E, V> implements Callback<TableColumn.CellDataFeatures<Pair<T, Pair<E, V>>, V>, ObservableValue<V>> {
+    @Override
+    public ObservableValue<V> call(TableColumn.CellDataFeatures<Pair<T, Pair<E, V>>, V> data) {
+        return new ReadOnlyObjectWrapper<>(data.getValue().getValue().getValue());
+    }
+}
+
+class TripleValueKeyFactory<T, E, V> implements Callback<TableColumn.CellDataFeatures<Pair<T, Pair<E, V>>, E>, ObservableValue<E>> {
+    @Override
+    public ObservableValue<E> call(TableColumn.CellDataFeatures<Pair<T, Pair<E, V>>, E> data) {
+        E value = data.getValue().getValue().getKey();
+        if (value instanceof ObservableValue) {
+            return (ObservableValue) value;
+        } else {
+            return new ReadOnlyObjectWrapper<>(value);
+        }
+    }
+}
+
+class DoublePairKeyValueFactory<T, E, V, S> implements Callback<TableColumn.CellDataFeatures<Pair<Pair<T, S>, Pair<E, V>>, S>, ObservableValue<S>> {
+    @Override
+    public ObservableValue<S> call(TableColumn.CellDataFeatures<Pair<Pair<T, S>, Pair<E, V>>, S> data) {
+        return new ReadOnlyObjectWrapper<>(data.getValue().getKey().getValue());
+    }
+}
+
+class DoublePairValueKeyFactory<T, E, V, S> implements Callback<TableColumn.CellDataFeatures<Pair<Pair<T, S>, Pair<E, V>>, E>, ObservableValue<E>> {
+    @Override
+    public ObservableValue<E> call(TableColumn.CellDataFeatures<Pair<Pair<T, S>, Pair<E, V>>, E> data) {
+        return new ReadOnlyObjectWrapper<>(data.getValue().getValue().getKey());
+    }
+}
+
+class DoublePairValueValueFactory<T, E, V, S> implements Callback<TableColumn.CellDataFeatures<Pair<Pair<T, S>, Pair<E, V>>, V>, ObservableValue<V>> {
+    @Override
+    public ObservableValue<V> call(TableColumn.CellDataFeatures<Pair<Pair<T, S>, Pair<E, V>>, V> data) {
+        return new ReadOnlyObjectWrapper<>(data.getValue().getValue().getValue());
+    }
+}
+class DoublePairKeyKeyFactory<T, E, V, S> implements Callback<TableColumn.CellDataFeatures<Pair<Pair<T, S>, Pair<E, V>>, T>, ObservableValue<T>> {
+    @Override
+    public ObservableValue<T> call(TableColumn.CellDataFeatures<Pair<Pair<T, S>, Pair<E, V>>, T> data) {
+        T value = data.getValue().getKey().getKey();
+        if (value instanceof ObservableValue) {
+            return (ObservableValue) value;
+        } else {
+            return new ReadOnlyObjectWrapper<>(value);
+        }
+    }
+}
 

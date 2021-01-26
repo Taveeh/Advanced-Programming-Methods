@@ -4,10 +4,12 @@ import Exceptions.InterpreterException;
 import Model.ADTs.*;
 import Model.ProgramState;
 import Model.Statement.IStatement;
+import Model.Triplet;
 import Model.Values.ReferenceValue;
 import Model.Values.StringValue;
 import Model.Values.Value;
 import Repository.IRepository;
+import javafx.util.Pair;
 
 import java.io.BufferedReader;
 import java.util.*;
@@ -204,6 +206,25 @@ public class Controller {
         }
     }
 
+    public MyIToySemaphoreTable<Triplet> getToySemaphoreTable() {
+        if (repository.getProgramList().size() == 0) {
+            return new MyToySemaphoreTable<>();
+        }
+        return repository.getProgramList().get(0).getToySemaphoreTable();
+    }
+
+    public MyIBarrierTable<Pair<Integer, List<Integer>>> getBarrierTable() {
+        if (repository.getProgramList().size() == 0) {
+            return new MyBarrierTable<>();
+        }
+        return repository.getProgramList().get(0).getBarrierTable();
+    }
+    public MyICountSemaphore<Pair<Integer, List<Integer>>> getCountSemaphoreTable() {
+        if (repository.getProgramList().size() == 0) {
+            return new MyCountSemaphore<>();
+        }
+        return repository.getProgramList().get(0).getCountSemaphoreTable();
+    }
     public MyIHeap<Value> getHeapTable() {
         if (repository.getProgramList().size() == 0) {
             return new MyHeap<>();

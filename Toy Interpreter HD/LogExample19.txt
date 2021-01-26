@@ -1,0 +1,2524 @@
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+Ref (int) v1;
+int cnt;
+new(v1,2);
+newToySemaphore (cnt, readHeap(v1), 1);
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+print(readHeap(v1));
+ToyRelease (cnt));
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt));
+ToyAcquire (cnt);
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+Ref (int) v1
+int cnt;
+new(v1,2);
+newToySemaphore (cnt, readHeap(v1), 1);
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+print(readHeap(v1));
+ToyRelease (cnt));
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt));
+ToyAcquire (cnt);
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+Ref (int) v1
+int cnt;
+new(v1,2);
+newToySemaphore (cnt, readHeap(v1), 1);
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+print(readHeap(v1));
+ToyRelease (cnt));
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt));
+ToyAcquire (cnt);
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+int cnt;
+new(v1,2);
+newToySemaphore (cnt, readHeap(v1), 1);
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+print(readHeap(v1));
+ToyRelease (cnt));
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt));
+ToyAcquire (cnt);
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+v1 -> (0, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+int cnt;
+new(v1,2);
+newToySemaphore (cnt, readHeap(v1), 1);
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+print(readHeap(v1));
+ToyRelease (cnt));
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt));
+ToyAcquire (cnt);
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+v1 -> (0, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+int cnt
+new(v1,2);
+newToySemaphore (cnt, readHeap(v1), 1);
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+print(readHeap(v1));
+ToyRelease (cnt));
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt));
+ToyAcquire (cnt);
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+v1 -> (0, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+int cnt
+new(v1,2);
+newToySemaphore (cnt, readHeap(v1), 1);
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+print(readHeap(v1));
+ToyRelease (cnt));
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt));
+ToyAcquire (cnt);
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+v1 -> (0, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+new(v1,2);
+newToySemaphore (cnt, readHeap(v1), 1);
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+print(readHeap(v1));
+ToyRelease (cnt));
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt));
+ToyAcquire (cnt);
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 0
+v1 -> (0, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+new(v1,2);
+newToySemaphore (cnt, readHeap(v1), 1);
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+print(readHeap(v1));
+ToyRelease (cnt));
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt));
+ToyAcquire (cnt);
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 0
+v1 -> (0, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+new(v1,2)
+newToySemaphore (cnt, readHeap(v1), 1);
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+print(readHeap(v1));
+ToyRelease (cnt));
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt));
+ToyAcquire (cnt);
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 0
+v1 -> (0, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+new(v1,2)
+newToySemaphore (cnt, readHeap(v1), 1);
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+print(readHeap(v1));
+ToyRelease (cnt));
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt));
+ToyAcquire (cnt);
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 0
+v1 -> (0, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+newToySemaphore (cnt, readHeap(v1), 1);
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+print(readHeap(v1));
+ToyRelease (cnt));
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt));
+ToyAcquire (cnt);
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 0
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 2
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+newToySemaphore (cnt, readHeap(v1), 1);
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+print(readHeap(v1));
+ToyRelease (cnt));
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt));
+ToyAcquire (cnt);
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 0
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 2
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+newToySemaphore (cnt, readHeap(v1), 1)
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+print(readHeap(v1));
+ToyRelease (cnt));
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt));
+ToyAcquire (cnt);
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 0
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 2
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+newToySemaphore (cnt, readHeap(v1), 1)
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+print(readHeap(v1));
+ToyRelease (cnt));
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt));
+ToyAcquire (cnt);
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 0
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 2
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+print(readHeap(v1));
+ToyRelease (cnt));
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt));
+ToyAcquire (cnt);
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 2
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+print(readHeap(v1));
+ToyRelease (cnt));
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt));
+ToyAcquire (cnt);
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 2
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+print(readHeap(v1));
+ToyRelease (cnt))
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt));
+ToyAcquire (cnt);
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 2
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+print(readHeap(v1));
+ToyRelease (cnt))
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt));
+ToyAcquire (cnt);
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 2
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt));
+ToyAcquire (cnt);
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 2
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 2 ---------
+ --------Execution Stack-------- 
+ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+print(readHeap(v1));
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 2
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt));
+ToyAcquire (cnt);
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 2
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 2 ---------
+ --------Execution Stack-------- 
+ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+print(readHeap(v1));
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 2
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt))
+ToyAcquire (cnt);
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 2
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 2 ---------
+ --------Execution Stack-------- 
+ToyAcquire (cnt)
+writeHeap(v1, readHeap(v1)*10);
+print(readHeap(v1));
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 2
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+fork(ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt))
+ToyAcquire (cnt);
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 2
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 2 ---------
+ --------Execution Stack-------- 
+ToyAcquire (cnt)
+writeHeap(v1, readHeap(v1)*10);
+print(readHeap(v1));
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 2
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+ToyAcquire (cnt);
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 2
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 2 ---------
+ --------Execution Stack-------- 
+writeHeap(v1, readHeap(v1)*10);
+print(readHeap(v1));
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 2
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 3 ---------
+ --------Execution Stack-------- 
+ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 2
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+ToyAcquire (cnt);
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 2
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 2 ---------
+ --------Execution Stack-------- 
+writeHeap(v1, readHeap(v1)*10);
+print(readHeap(v1));
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 2
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 3 ---------
+ --------Execution Stack-------- 
+ToyAcquire (cnt);
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 2
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+ToyAcquire (cnt)
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 2
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 2 ---------
+ --------Execution Stack-------- 
+writeHeap(v1, readHeap(v1)*10)
+print(readHeap(v1));
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 2
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 3 ---------
+ --------Execution Stack-------- 
+ToyAcquire (cnt)
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 2
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+ToyAcquire (cnt)
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 2
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 2 ---------
+ --------Execution Stack-------- 
+writeHeap(v1, readHeap(v1)*10)
+print(readHeap(v1));
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 2
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 3 ---------
+ --------Execution Stack-------- 
+ToyAcquire (cnt)
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 2
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+ToyAcquire (cnt)
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 2 ---------
+ --------Execution Stack-------- 
+print(readHeap(v1));
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 3 ---------
+ --------Execution Stack-------- 
+ToyAcquire (cnt)
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+ToyAcquire (cnt)
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 2 ---------
+ --------Execution Stack-------- 
+print(readHeap(v1));
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 3 ---------
+ --------Execution Stack-------- 
+ToyAcquire (cnt)
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+ToyAcquire (cnt)
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 2 ---------
+ --------Execution Stack-------- 
+print(readHeap(v1))
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 3 ---------
+ --------Execution Stack-------- 
+ToyAcquire (cnt)
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+ToyAcquire (cnt)
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 2 ---------
+ --------Execution Stack-------- 
+print(readHeap(v1))
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 3 ---------
+ --------Execution Stack-------- 
+ToyAcquire (cnt)
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+ToyAcquire (cnt)
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+20
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 2 ---------
+ --------Execution Stack-------- 
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+20
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 3 ---------
+ --------Execution Stack-------- 
+ToyAcquire (cnt)
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+20
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+ToyAcquire (cnt)
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+20
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 2 ---------
+ --------Execution Stack-------- 
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+20
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 3 ---------
+ --------Execution Stack-------- 
+ToyAcquire (cnt)
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+20
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+ToyAcquire (cnt)
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+20
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 2 ---------
+ --------Execution Stack-------- 
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+20
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 3 ---------
+ --------Execution Stack-------- 
+ToyAcquire (cnt)
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+20
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+ToyAcquire (cnt)
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+20
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 2 ---------
+ --------Execution Stack-------- 
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+20
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 3 ---------
+ --------Execution Stack-------- 
+ToyAcquire (cnt)
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+20
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+20
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 2 ---------
+ --------Execution Stack-------- 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+20
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 3 ---------
+ --------Execution Stack-------- 
+ToyAcquire (cnt)
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+20
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+print(readHeap(v1)-1);
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+20
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 3 ---------
+ --------Execution Stack-------- 
+ToyAcquire (cnt)
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+20
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+print(readHeap(v1)-1)
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+20
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 3 ---------
+ --------Execution Stack-------- 
+ToyAcquire (cnt)
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+20
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+print(readHeap(v1)-1)
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+20
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 3 ---------
+ --------Execution Stack-------- 
+ToyAcquire (cnt)
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+20
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 1 ---------
+ --------Execution Stack-------- 
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+20
+19
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+
+ProgramID: --------- 3 ---------
+ --------Execution Stack-------- 
+ToyAcquire (cnt)
+writeHeap(v1, readHeap(v1)*10);
+writeHeap(v1, readHeap(v1)*2);
+print(readHeap(v1));
+ToyRelease (cnt)
+ 
+
+ -------- Symbol  Table -------- 
+cnt -> 1
+v1 -> (1, int)
+
+ -------- Output Console -------- 
+20
+19
+
+ --------  File  Table  -------- 
+
+ --------  Heap  Table  -------- 
+1 -> 20
+
+ --------  Lock  Table  -------- 
+
+ --------  Latch  Table  -------- 
+
+ ------  Semaphore  Table1  ------ 
+1 -> Model.Triplet@1303cf37
+
+ ------  Semaphore  Table2  ------ 
+
+ ------------------------------- 
+
+
+

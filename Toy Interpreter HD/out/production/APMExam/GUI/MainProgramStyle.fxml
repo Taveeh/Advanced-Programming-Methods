@@ -21,6 +21,13 @@
         <ColumnConstraints minWidth="80" />
         <ColumnConstraints minWidth="80" />
         <ColumnConstraints minWidth="80" />
+        <ColumnConstraints minWidth="80" />
+        <ColumnConstraints minWidth="80" />
+        <ColumnConstraints minWidth="80" />
+        <ColumnConstraints minWidth="80" />
+        <ColumnConstraints minWidth="80" />
+        <ColumnConstraints minWidth="80" />
+        <ColumnConstraints minWidth="80" />
     </columnConstraints>
 
     <rowConstraints>
@@ -92,6 +99,34 @@
         <columns>
             <TableColumn fx:id="latchAddressTableColumn" text="Location"/>
             <TableColumn fx:id="latchIdentifierTableColumn" text="Value"/>
+        </columns>
+    </TableView>
+
+    <TextField text="Toy Semaphore Table" editable="false" GridPane.columnIndex="6" GridPane.rowIndex="1" GridPane.columnSpan="4" />
+    <TableView fx:id="toySemTableView" accessibleRole="IMAGE_VIEW" GridPane.columnIndex="6" GridPane.rowIndex="2" GridPane.columnSpan="4" >
+        <columns>
+            <TableColumn fx:id="toyAddressTableColumn" text="Location"/>
+            <TableColumn fx:id="toyValue1TableColumn" text="Value1"/>
+            <TableColumn fx:id="toyListTableColumn" text="List"/>
+            <TableColumn fx:id="toyValue2TableColumn" text="Value"/>
+        </columns>
+    </TableView>
+
+    <TextField text="Count Semaphore Table" editable="false" GridPane.columnIndex="6" GridPane.rowIndex="3" GridPane.columnSpan="3" />
+    <TableView fx:id="countSemTableView" accessibleRole="IMAGE_VIEW" GridPane.columnIndex="6" GridPane.rowIndex="4" GridPane.columnSpan="3" >
+        <columns>
+            <TableColumn fx:id="countAddressTableColumn" text="Location"/>
+            <TableColumn fx:id="countValueTableColumn" text="Value"/>
+            <TableColumn fx:id="countListTableColumn" text="List"/>
+        </columns>
+    </TableView>
+
+    <TextField text="Barrier Table" editable="false" GridPane.columnIndex="9" GridPane.rowIndex="3" GridPane.columnSpan="3" />
+    <TableView fx:id="barrierTableView" accessibleRole="IMAGE_VIEW" GridPane.columnIndex="9" GridPane.rowIndex="4" GridPane.columnSpan="3" >
+        <columns>
+            <TableColumn fx:id="barrierAddressTableColumn" text="Location"/>
+            <TableColumn fx:id="barrierValueTableColumn" text="Value"/>
+            <TableColumn fx:id="barrierListTableColumn" text="List"/>
         </columns>
     </TableView>
 

@@ -64,6 +64,9 @@ public class Main extends Application {
         chooseProgramController.addStatement(example16);
         chooseProgramController.addStatement(example17);
         chooseProgramController.addStatement(example18);
+        chooseProgramController.addStatement(example19);
+        chooseProgramController.addStatement(example20);
+        chooseProgramController.addStatement(example21);
 
     }
 
@@ -1124,8 +1127,266 @@ public class Main extends Application {
         );
     }
 
+    private static final IStatement example19; // ToySemaphore
+
+    static {
+        example19 = new CompoundStatement(
+                new VariableDeclarationStatement(
+                        "v1",
+                        new ReferenceType(new IntegerType())
+                ),
+                new CompoundStatement(
+                        new VariableDeclarationStatement(
+                                "cnt",
+                                new IntegerType()
+                        ),
+                        new CompoundStatement(
+                                new AllocateHeapStatement(
+                                        "v1",
+                                        new ValueExpression(new IntegerValue(2))
+                                ),
+                                new CompoundStatement(
+                                        new NewToySemaphore(
+                                                "cnt",
+                                                new ReadHeapExpression(new VariableExpression("v1")),
+                                                new ValueExpression(new IntegerValue(1))
+                                        ),
+                                        new CompoundStatement(
+                                                new ForkStatement(
+                                                        new CompoundStatement(
+                                                                new ToyAcquireStatement("cnt"),
+                                                                new CompoundStatement(
+                                                                        new WriteHeapStatement(
+                                                                                "v1",
+                                                                                new ArithmeticExpression(
+                                                                                        '*',
+                                                                                        new ReadHeapExpression(new VariableExpression("v1")),
+                                                                                        new ValueExpression(new IntegerValue(10))
+                                                                                )
+                                                                        ),
+                                                                        new CompoundStatement(
+                                                                                new PrintStatement(new ReadHeapExpression(new VariableExpression("v1"))),
+                                                                                new ToyReleaseStatement("cnt")
+                                                                        )
+                                                                )
+                                                        )
+                                                ),
+                                                new CompoundStatement(
+                                                        new ForkStatement(
+                                                                new CompoundStatement(
+                                                                        new ToyAcquireStatement("cnt"),
+                                                                        new CompoundStatement(
+                                                                                new WriteHeapStatement(
+                                                                                        "v1",
+                                                                                        new ArithmeticExpression(
+                                                                                                '*',
+                                                                                                new ReadHeapExpression(new VariableExpression("v1")),
+                                                                                                new ValueExpression(new IntegerValue(10))
+                                                                                        )
+                                                                                ),
+                                                                                new CompoundStatement(
+                                                                                        new CompoundStatement(
+                                                                                                new WriteHeapStatement(
+                                                                                                        "v1",
+                                                                                                        new ArithmeticExpression(
+                                                                                                                '*',
+                                                                                                                new ReadHeapExpression(new VariableExpression("v1")),
+                                                                                                                new ValueExpression(new IntegerValue(2))
+                                                                                                        )
+                                                                                                ),
+                                                                                                new PrintStatement(new ReadHeapExpression(new VariableExpression("v1")))
+                                                                                        ),
+                                                                                        new ToyReleaseStatement("cnt")
+                                                                                )
+                                                                        )
+                                                                )
+                                                        ),
+                                                        new CompoundStatement(
+                                                                new ToyAcquireStatement("cnt"),
+                                                                new CompoundStatement(
+                                                                        new PrintStatement(new ArithmeticExpression('-', new ReadHeapExpression(new VariableExpression("v1")), new ValueExpression(new IntegerValue(1)))),
+                                                                        new ToyReleaseStatement("cnt")
+                                                                )
+                                                        )
+                                                )
+                                        )
+                                )
+                        )
+                )
+        );
+    }
+
+    private static final IStatement example20; // Count Semaphore
+
+    static {
+        example20 = new CompoundStatement(
+                new VariableDeclarationStatement(
+                        "v1",
+                        new ReferenceType(new IntegerType())
+                ),
+                new CompoundStatement(
+                        new VariableDeclarationStatement(
+                                "cnt",
+                                new IntegerType()
+                        ),
+                        new CompoundStatement(
+                                new AllocateHeapStatement(
+                                        "v1",
+                                        new ValueExpression(new IntegerValue(1))
+                                ),
+                                new CompoundStatement(
+                                        new NewCountSemaphoreStatement(
+                                                "cnt",
+                                                new ReadHeapExpression(new VariableExpression("v1"))
+                                        ),
+                                        new CompoundStatement(
+                                                new ForkStatement(
+                                                        new CompoundStatement(
+                                                                new CountAcquireStatement("cnt"),
+                                                                new CompoundStatement(
+                                                                        new WriteHeapStatement(
+                                                                                "v1",
+                                                                                new ArithmeticExpression(
+                                                                                        '*',
+                                                                                        new ReadHeapExpression(new VariableExpression("v1")),
+                                                                                        new ValueExpression(new IntegerValue(10))
+                                                                                )
+                                                                        ),
+                                                                        new CompoundStatement(
+                                                                                new PrintStatement(new ReadHeapExpression(new VariableExpression("v1"))),
+                                                                                new CountReleaseStatement("cnt")
+                                                                        )
+                                                                )
+                                                        )
+                                                ),
+                                                new CompoundStatement(
+                                                        new ForkStatement(
+                                                                new CompoundStatement(
+                                                                        new CountAcquireStatement("cnt"),
+                                                                        new CompoundStatement(
+                                                                                new WriteHeapStatement(
+                                                                                        "v1",
+                                                                                        new ArithmeticExpression(
+                                                                                                '*',
+                                                                                                new ReadHeapExpression(new VariableExpression("v1")),
+                                                                                                new ValueExpression(new IntegerValue(10))
+                                                                                        )
+                                                                                ),
+                                                                                new CompoundStatement(
+                                                                                        new CompoundStatement(
+                                                                                                new WriteHeapStatement(
+                                                                                                        "v1",
+                                                                                                        new ArithmeticExpression(
+                                                                                                                '*',
+                                                                                                                new ReadHeapExpression(new VariableExpression("v1")),
+                                                                                                                new ValueExpression(new IntegerValue(2))
+                                                                                                        )
+                                                                                                ),
+                                                                                                new PrintStatement(new ReadHeapExpression(new VariableExpression("v1")))
+                                                                                        ),
+                                                                                        new CountReleaseStatement("cnt")
+                                                                                )
+                                                                        )
+                                                                )
+                                                        ),
+                                                        new CompoundStatement(
+                                                                new CountAcquireStatement("cnt"),
+                                                                new CompoundStatement(
+                                                                        new PrintStatement(new ArithmeticExpression('-', new ReadHeapExpression(new VariableExpression("v1")), new ValueExpression(new IntegerValue(1)))),
+                                                                        new CountReleaseStatement("cnt")
+                                                                )
+                                                        )
+                                                )
+                                        )
+                                )
+                        )
+                )
+        );
+    }
+
+    private static final IStatement example21; // Barrier
+
+    static {
+        example21 = new CompoundStatement(
+                new VariableDeclarationStatement(
+                        "v1",
+                        new ReferenceType(new IntegerType())
+                ),
+                new CompoundStatement(
+                        new VariableDeclarationStatement(
+                                "v2",
+                                new ReferenceType(new IntegerType())
+                        ),
+                        new CompoundStatement(
+                                new VariableDeclarationStatement(
+                                        "v3",
+                                        new ReferenceType(new IntegerType())
+                                ),
+                                new CompoundStatement(
+                                        new VariableDeclarationStatement(
+                                                "cnt",
+                                                new IntegerType()
+                                        ),
+                                        new CompoundStatement(
+                                                new AllocateHeapStatement("v1", new ValueExpression(new IntegerValue(2))),
+                                                new CompoundStatement(
+                                                        new AllocateHeapStatement("v2", new ValueExpression(new IntegerValue(3))),
+                                                        new CompoundStatement(
+                                                                new AllocateHeapStatement("v3", new ValueExpression(new IntegerValue(4))),
+                                                                new CompoundStatement(
+                                                                        new NewBarrierStatement("cnt", new ReadHeapExpression(new VariableExpression("v2"))),
+                                                                        new CompoundStatement(
+                                                                                new ForkStatement(
+                                                                                        new CompoundStatement(
+                                                                                                new AwaitBarrierStatement("cnt"),
+                                                                                                new CompoundStatement(
+                                                                                                        new WriteHeapStatement("v1", new ArithmeticExpression(
+                                                                                                                '*',
+                                                                                                                new ReadHeapExpression(new VariableExpression("v1")),
+                                                                                                                new ValueExpression(new IntegerValue(10))
+                                                                                                        )),
+                                                                                                        new PrintStatement(new ReadHeapExpression(new VariableExpression("v1")))
+                                                                                                )
+                                                                                        )
+                                                                                ),
+                                                                                new CompoundStatement(
+                                                                                        new ForkStatement(
+                                                                                                new CompoundStatement(
+                                                                                                        new AwaitBarrierStatement("cnt"),
+                                                                                                        new CompoundStatement(
+                                                                                                                new WriteHeapStatement("v2", new ArithmeticExpression(
+                                                                                                                        '*',
+                                                                                                                        new ReadHeapExpression(new VariableExpression("v2")),
+                                                                                                                        new ValueExpression(new IntegerValue(10))
+                                                                                                                )),
+                                                                                                                new CompoundStatement(
+                                                                                                                        new WriteHeapStatement("v2", new ArithmeticExpression(
+                                                                                                                                '*',
+                                                                                                                                new ReadHeapExpression(new VariableExpression("v2")),
+                                                                                                                                new ValueExpression(new IntegerValue(10))
+                                                                                                                        )),
+                                                                                                                        new PrintStatement(new ReadHeapExpression(new VariableExpression("v2")))
+                                                                                                                )
+                                                                                                        )
+                                                                                                )
+                                                                                        ),
+                                                                                        new CompoundStatement(
+                                                                                                new AwaitBarrierStatement("cnt"),
+                                                                                                new PrintStatement(new ReadHeapExpression(new VariableExpression("v3")))
+                                                                                        )
+                                                                                )
+                                                                        )
+                                                                )
+                                                        )
+                                                )
+                                        )
+                                )
+                        )
+                )
+        );
+    }
+
     public static void main(String[] args) {
         launch(args);
     }
 }
-

@@ -4,12 +4,12 @@ import Exceptions.ExecutionException;
 import Exceptions.InterpreterException;
 import Model.ADTs.*;
 import Model.Statement.IStatement;
-import Model.Statement.NopStatement;
 import Model.Values.StringValue;
 import Model.Values.Value;
+import javafx.util.Pair;
 
 import java.io.BufferedReader;
-import java.io.FileDescriptor;
+import java.util.List;
 
 public class ProgramState {
     MyIStack<IStatement> executionStack;
@@ -20,6 +20,18 @@ public class ProgramState {
     IStatement originalProgram;
     MyILockTable<Integer> lockTable;
     MyILatchTable<Integer> latchTable;
+    MyIToySemaphoreTable<Triplet> toySemaphoreTable;
+    MyIBarrierTable<Pair<Integer, List<Integer>>> barrierTable;
+
+    public MyIBarrierTable<Pair<Integer, List<Integer>>> getBarrierTable() {
+        return barrierTable;
+    }
+
+    public void setBarrierTable(MyIBarrierTable<Pair<Integer, List<Integer>>> barrierTable) {
+        this.barrierTable = barrierTable;
+    }
+
+    MyICountSemaphore<Pair<Integer, List<Integer>>> countSemaphoreTable;
 
     public MyILatchTable<Integer> getLatchTable() {
         return latchTable;
@@ -27,6 +39,22 @@ public class ProgramState {
 
     public void setLatchTable(MyILatchTable<Integer> latchTable) {
         this.latchTable = latchTable;
+    }
+
+    public MyIToySemaphoreTable<Triplet> getToySemaphoreTable() {
+        return toySemaphoreTable;
+    }
+
+    public void setToySemaphoreTable(MyIToySemaphoreTable<Triplet> toySemaphoreTable) {
+        this.toySemaphoreTable = toySemaphoreTable;
+    }
+
+    public MyICountSemaphore<Pair<Integer, List<Integer>>> getCountSemaphoreTable() {
+        return countSemaphoreTable;
+    }
+
+    public void setCountSemaphoreTable(MyICountSemaphore<Pair<Integer, List<Integer>>> countSemaphoreTable) {
+        this.countSemaphoreTable = countSemaphoreTable;
     }
 
     public static Integer lastID = 1;
@@ -53,7 +81,7 @@ public class ProgramState {
     }
 
 
-    public ProgramState(MyIStack<IStatement> executionStack, MyIDictionary<String, Value> symbolTable, MyIList<Value> outputConsole, MyIDictionary<StringValue, BufferedReader> fileTable, MyIHeap<Value> heapTable, MyILockTable<Integer> lockTable, MyILatchTable<Integer> latchTable, IStatement originalProgram) {
+    public ProgramState(MyIStack<IStatement> executionStack, MyIDictionary<String, Value> symbolTable, MyIList<Value> outputConsole, MyIDictionary<StringValue, BufferedReader> fileTable, MyIHeap<Value> heapTable, MyILockTable<Integer> lockTable, MyILatchTable<Integer> latchTable, MyIToySemaphoreTable<Triplet> toySemaphoreTable, MyICountSemaphore<Pair<Integer, List<Integer>>> countSemaphoreTable, MyIBarrierTable<Pair<Integer, List<Integer>>> barrierTable, IStatement originalProgram) {
         this.executionStack = executionStack;
         this.symbolTable = symbolTable;
         this.outputConsole = outputConsole;
@@ -62,13 +90,16 @@ public class ProgramState {
         this.originalProgram = originalProgram;
         this.lockTable = lockTable;
         this.latchTable = latchTable;
+        this.toySemaphoreTable = toySemaphoreTable;
+        this.countSemaphoreTable = countSemaphoreTable;
+        this.barrierTable = barrierTable;
         id = 1;
         if (originalProgram != null) {
             executionStack.push(originalProgram);
         }
     }
 
-    public ProgramState(MyIStack<IStatement> executionStack, MyIDictionary<String, Value> symbolTable, MyIList<Value> outputConsole, MyIDictionary<StringValue, BufferedReader> fileTable, MyIHeap<Value> heapTable, MyILockTable<Integer> lockTable, MyILatchTable<Integer> latchTable) {
+    public ProgramState(MyIStack<IStatement> executionStack, MyIDictionary<String, Value> symbolTable, MyIList<Value> outputConsole, MyIDictionary<StringValue, BufferedReader> fileTable, MyIHeap<Value> heapTable, MyILockTable<Integer> lockTable, MyILatchTable<Integer> latchTable, MyIToySemaphoreTable<Triplet> toySemaphoreTable, MyICountSemaphore<Pair<Integer, List<Integer>>> countSemaphoreTable, MyIBarrierTable<Pair<Integer, List<Integer>>> barrierTable) {
         this.executionStack = executionStack;
         this.symbolTable = symbolTable;
         this.outputConsole = outputConsole;
@@ -76,6 +107,9 @@ public class ProgramState {
         this.heapTable = heapTable;
         this.lockTable = lockTable;
         this.latchTable = latchTable;
+        this.toySemaphoreTable = toySemaphoreTable;
+        this.countSemaphoreTable = countSemaphoreTable;
+        this.barrierTable = barrierTable;
         id = 1;
     }
 
@@ -130,6 +164,7 @@ public class ProgramState {
         IStatement currentStatement = executionStack.pop();
         return currentStatement.execute(this);
     }
+
     @Override
     public String toString() {
         return  "ProgramID: --------- " + id.toString() + " ---------\n" +
@@ -147,6 +182,12 @@ public class ProgramState {
                 lockTable.toString() + '\n' +
                 " --------  Latch  Table  -------- \n" +
                 latchTable.toString() + '\n' +
+                " ------  Semaphore  Table1  ------ \n" +
+                toySemaphoreTable.toString() + '\n' +
+                " ------  Semaphore  Table2  ------ \n" +
+                countSemaphoreTable.toString() + '\n' +
+                " ------  Barrier  Table  ------ \n" +
+                barrierTable.toString() + '\n' +
                 " ------------------------------- \n\n\n";
     }
 }
