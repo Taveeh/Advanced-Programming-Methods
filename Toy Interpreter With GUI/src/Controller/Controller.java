@@ -218,6 +218,12 @@ public class Controller {
         }
         return repository.getProgramList().get(0).getFileTable();
     }
+    public MyILatchTable<Integer> getLatchTable() {
+        if (repository.getProgramList().size() == 0) {
+            return new MyLatchTable<>();
+        }
+        return repository.getProgramList().get(0).getLatchTable();
+    }
 
     public MyIStack<IStatement> getExecutionStack(int process) {
         List<ProgramState> states = repository

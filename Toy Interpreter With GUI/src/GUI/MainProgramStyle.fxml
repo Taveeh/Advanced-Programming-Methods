@@ -19,6 +19,8 @@
         <ColumnConstraints minWidth="80"/>
         <ColumnConstraints minWidth="80"/>
         <ColumnConstraints minWidth="80"/>
+        <ColumnConstraints minWidth="80"/>
+        <ColumnConstraints minWidth="80"/>
     </columnConstraints>
 
     <rowConstraints>
@@ -31,7 +33,7 @@
     </rowConstraints>
 
     <TextField editable="false" fx:id="numberOfStatesTextField" text="There are currently no program states"
-               GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.columnSpan="2">
+               GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.columnSpan="3">
         <font>
             <Font name="Comic Sans Ms" size="18"/>
         </font>
@@ -78,4 +80,13 @@
             onAction="#runOneStep" GridPane.halignment="CENTER"/>
 
 
+    <TextField editable="false" text="Latch Table" GridPane.columnIndex="4" GridPane.rowIndex="1"
+               GridPane.columnSpan="2"/>
+    <TableView fx:id="latchTableView" accessibleRole="IMAGE_VIEW" GridPane.columnIndex="4" GridPane.rowIndex="2"
+               GridPane.columnSpan="2" GridPane.rowSpan="3">
+        <columns>
+            <TableColumn fx:id="latchLocationTableColumn" text="Location"/>
+            <TableColumn fx:id="latchValueTableColumn" text="Value"/>
+        </columns>
+    </TableView>
 </GridPane>

@@ -17,6 +17,16 @@ public class ProgramState {
     MyIDictionary<StringValue, BufferedReader> fileTable;
     MyIHeap<Value> heapTable;
     IStatement originalProgram;
+    MyILatchTable<Integer> latchTable;
+
+    public MyILatchTable<Integer> getLatchTable() {
+        return latchTable;
+    }
+
+    public void setLatchTable(MyILatchTable<Integer> latchTable) {
+        this.latchTable = latchTable;
+    }
+
     public static Integer lastID = 1;
     private Integer id;
     public synchronized void setId() {
@@ -39,25 +49,27 @@ public class ProgramState {
     public void typeCheck() throws InterpreterException{
         originalProgram.typecheck(new MyDictionary<>());
     }
-    public ProgramState(MyIStack<IStatement> executionStack, MyIDictionary<String, Value> symbolTable, MyIList<Value> outputConsole, MyIDictionary<StringValue, BufferedReader> fileTable, MyIHeap<Value> heapTable, IStatement originalProgram) {
+    public ProgramState(MyIStack<IStatement> executionStack, MyIDictionary<String, Value> symbolTable, MyIList<Value> outputConsole, MyIDictionary<StringValue, BufferedReader> fileTable, MyIHeap<Value> heapTable, MyILatchTable<Integer> latchTable, IStatement originalProgram) {
         this.executionStack = executionStack;
         this.symbolTable = symbolTable;
         this.outputConsole = outputConsole;
         this.fileTable = fileTable;
         this.heapTable = heapTable;
         this.originalProgram = originalProgram;
+        this.latchTable = latchTable;
         id = 1;
         if (originalProgram != null) {
             executionStack.push(originalProgram);
         }
     }
 
-    public ProgramState(MyIStack<IStatement> executionStack, MyIDictionary<String, Value> symbolTable, MyIList<Value> outputConsole, MyIDictionary<StringValue, BufferedReader> fileTable, MyIHeap<Value> heapTable) {
+    public ProgramState(MyIStack<IStatement> executionStack, MyIDictionary<String, Value> symbolTable, MyIList<Value> outputConsole, MyIDictionary<StringValue, BufferedReader> fileTable, MyIHeap<Value> heapTable, MyILatchTable<Integer> latchTable) {
         this.executionStack = executionStack;
         this.symbolTable = symbolTable;
         this.outputConsole = outputConsole;
         this.fileTable = fileTable;
         this.heapTable = heapTable;
+        this.latchTable = latchTable;
     }
 
     public MyIDictionary<String, Value> getSymbolTable() {

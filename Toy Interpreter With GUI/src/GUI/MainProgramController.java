@@ -54,6 +54,14 @@ public class MainProgramController {
     @FXML
     private TextField numberOfStatesTextField;
 
+    @FXML
+    private TableView<Pair<Integer, Integer>> latchTableView;
+
+    @FXML
+    private TableColumn<Pair<Integer, Integer>, Integer> latchLocationTableColumn;
+
+    @FXML
+    private TableColumn<Pair<Integer, Integer>, Integer> latchValueTableColumn;
 
     private Controller controller;
     List<ProgramState> programStateList;
@@ -62,7 +70,7 @@ public class MainProgramController {
         String file = "LogExample" + index + ".txt";
         MyIStack<IStatement> stack = new MyStack();
         stack.push(new NopStatement());
-        ProgramState state = new ProgramState(stack, new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap<>(), statement);
+        ProgramState state = new ProgramState(stack, new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap<>(), new MyLatchTable<>(), statement);
         IRepository repository = new Repository(file);
         repository.addState(state);
         controller = new Controller(repository);
@@ -95,11 +103,18 @@ public class MainProgramController {
     private void setAllFields() {
         setNumberOfStates();
         populateHeapTable();
+        populateLatchTable();
         populateSymbolTable();
         populateProgramList();
         populateFileList();
         populateOutputList();
         populateExecutionList();
+    }
+
+    private void populateLatchTable() {
+        List<Pair<Integer, Integer>> list = new ArrayList<>();
+        controller.getLatchTable().getContent().forEach((key, value) -> list.add(new Pair<>(key, value)));
+        latchTableView.setItems(FXCollections.observableList(list));
     }
 
     private void populateHeapTable() {
@@ -164,15 +179,9 @@ public class MainProgramController {
 
     @FXML
     private void runOneStep() {
-        setAllFields();
-
         oneStep();
 
-        populateExecutionList();
-        setNumberOfStates();
-        populateProgramList();
-        populateSymbolTable();
-        populateHeapTable();
+        setAllFields();
     }
 
 
@@ -180,6 +189,9 @@ public class MainProgramController {
     private void initialize() {
         heapTableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
         symbolTableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+        latchTableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+        latchLocationTableColumn.setCellValueFactory(new PairKeyFactory<>());
+        latchValueTableColumn.setCellValueFactory(new PairValueFactory<>());
         addressTableColumn.setCellValueFactory(new PairKeyFactory<>());
         valueTableColumn.setCellValueFactory(new PairValueFactory<>());
         variableNameTableColumn.setCellValueFactory(new PairKeyFactory<>());

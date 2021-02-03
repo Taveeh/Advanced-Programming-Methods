@@ -32,7 +32,7 @@ public class CompoundStatement implements IStatement {
 
     @Override
     public String toString() {
-        return firstStatement.toString() + "; " + secondStatement.toString();
+        return firstStatement.toString() + ";\n" + secondStatement.toString();
     }
 
     @Override
